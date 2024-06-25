@@ -29,7 +29,7 @@ theme:
 
 nav:
   - Introduction: index.md
-  - "Prerequisite: Linear algebra": prereq_linearalgebra.md
+  - Abstract vector spaces: abstract-vector-spaces.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
