@@ -30,6 +30,7 @@ theme:
 nav:
   - Introduction: index.md
   - Abstract vector spaces: abstract-vector-spaces.md
+  - Hilbert spaces: hilbert-spaces.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

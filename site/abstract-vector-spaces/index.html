@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://openquantumsystemsnotes.com/prereq_linearalgebra/">
+        <link rel="canonical" href="https://openquantumsystemsnotes.com/abstract-vector-spaces/">
       
       
         <link rel="prev" href="..">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Prerequisite: Linear algebra - Notes for Open Quantum Systems</title>
+        <title>Abstract vector spaces - Notes for Open Quantum Systems</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#prerequisite-linear-algebra" class="md-skip">
+        <a href="#abstract-vector-spaces" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Prerequisite: Linear algebra
+              Abstract vector spaces
             
           </span>
         </div>
@@ -264,87 +264,15 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Prerequisite: Linear algebra
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Prerequisite: Linear algebra
+    Abstract vector spaces
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vector-spaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vector spaces
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vector spaces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#four-fundamental-vector-spaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Four fundamental vector spaces
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inner-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inner product
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vector-norm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vector norm
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -370,56 +298,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vector-spaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vector spaces
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vector spaces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#four-fundamental-vector-spaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Four fundamental vector spaces
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inner-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inner product
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vector-norm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vector norm
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -433,14 +311,25 @@
                   
 
 
-<h1 id="prerequisite-linear-algebra">Prerequisite: Linear algebra</h1>
-<h2 id="vector-spaces">Vector spaces</h2>
-<p>Lorem ipsum</p>
-<p>Linear combinations and bases</p>
-<h3 id="four-fundamental-vector-spaces">Four fundamental vector spaces</h3>
-<h2 id="inner-product">Inner product</h2>
-<p>Lorem ipsum</p>
-<h2 id="vector-norm">Vector norm</h2>
+<h1 id="abstract-vector-spaces">Abstract vector spaces</h1>
+<p>Abstract linear algebra is what happens when we do normal linear algebra, but we stop caring about the details of what a vector "actually" is. Instead, we just formulate a set of definitions (the same ones as in normal linear algebra, in fact), and base all our logic on those definitions. In other words, we take the findings of normal linear algebra and abstract them so that we are able to apply them to a wider range of objects and topics.</p>
+<p>For example, consider the vector space <span class="arithmatex">\(R^3\)</span>. It contains any vector in any direction you can literally think of. You can add any two (or more) vectors, stretch or shrink them by multiplying them with scalars, all to your heart's content. Also, you can condense the information of a vector space into just a set of basis vectors, which you can then use as a kind of common language to express any vector in the space. The basis vectors can be arbitrarily chosen, as long as there is at least one representative of each direction of the space, which in math is called linear independence.</p>
+<div class="admonition tip">
+<p class="admonition-title">Properties of vector spaces</p>
+<p><strong>Addition</strong></p>
+<ol>
+<li>We can add two vectors to get a third: <span class="arithmatex">\(\vec{v} + \vec{u} = \vec{w}\)</span></li>
+<li>The order doesn't matter: <span class="arithmatex">\(\vec{u} + \vec{v} = \vec{v} + \vec{u}\)</span></li>
+<li>To actually perform a vector addition, we add component-wise: <span class="arithmatex">\((v_1, \dots, v_n) + (u_1, \dots, u_n) = (v_1 + u_1, \dots, v_n + u_n)\)</span></li>
+</ol>
+<p><strong>Scalar multiplication</strong></p>
+<ol>
+<li>We can multiply a vector by a scalar, possibly complex, to get another vector: <span class="arithmatex">\(\lambda\vec{v} = \vec{u}\)</span></li>
+<li>Scalars can be moved around freely</li>
+</ol>
+</div>
+<p>Now, let's consider the set of all polynomials <span class="arithmatex">\(\mathcal{P}(x)\)</span>.</p>
+<p>Say we have two polynomials <span class="arithmatex">\(p_1(x)\)</span> and <span class="arithmatex">\(p_2(x)\)</span>. No matter what <span class="arithmatex">\(p_1(x)\)</span> and <span class="arithmatex">\(p_2(x)\)</span> actually are, the result will always be another polynomial, with the same degree as whichever of <span class="arithmatex">\(p_1(x)\)</span> or <span class="arithmatex">\(p_2(x)\)</span> had the highest degree. We can multiply a polynomial by a scalar.</p>
 
 
 
