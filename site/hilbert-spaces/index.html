@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://openquantumsystemsnotes.com/abstract-vector-spaces/">
+        <link rel="canonical" href="https://openquantumsystemsnotes.com/hilbert-spaces/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../abstract-vector-spaces/">
       
-      
-        <link rel="next" href="../hilbert-spaces/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Abstract vector spaces - Notes for Open Quantum Systems</title>
+        <title>Hilbert spaces - Notes for Open Quantum Systems</title>
       
     
     
@@ -82,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#abstract-vector-spaces" class="md-skip">
+        <a href="#hilbert-spaces" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Abstract vector spaces
+              Hilbert spaces
             
           </span>
         </div>
@@ -254,6 +252,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../abstract-vector-spaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abstract vector spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -266,67 +284,7 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Abstract vector spaces
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Abstract vector spaces
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hilbert-spaces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -335,6 +293,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -359,23 +318,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -389,41 +331,8 @@
                   
 
 
-<h1 id="abstract-vector-spaces">Abstract vector spaces</h1>
-<div class="admonition info">
-<p class="admonition-title">Why is this relevant?</p>
-<p>The language of quantum mechanics is linear algebra, and everything we do is done in special vector spaces called Hilbert spaces. Hilbert spaces can be infinite-dimensional (don't worry, we'll get there), and the "vectors" we work with aren't really vectors in the sense you'd learn about in a basic linear algebra course. Instead, they are functions.</p>
-</div>
-<p>Abstract linear algebra is what happens when we do normal linear algebra, but we stop caring about the details of what a vector "actually" is. Instead, we just formulate a set of definitions (the same ones as in normal linear algebra, in fact), and base all our logic on those definitions. In other words, we take the findings of normal linear algebra and abstract them so that we are able to apply them to a wider range of objects and topics.</p>
-<p>For example, consider the vector space <span class="arithmatex">\(R^3\)</span>. It contains any vector in any direction you can literally think of. You can add any two (or more) vectors, stretch or shrink them by multiplying them with scalars, all to your heart's content. Also, you can condense the information of a vector space into just a set of basis vectors, which you can then use as a kind of common language to express any vector in the space. The basis vectors can be arbitrarily chosen, as long as there is at least one representative of each direction of the space, which in math is called linear independence.</p>
-<p>If we play around with vectors like this for a while, we will start noticing certain properties that any vector space has to have in order to actually be a vector space. Formally, there are eight such properties, and we'll use them as axioms for defining what a vector space actually is.<sup id="fnref:smits"><a class="footnote-ref" href="#fn:smits">1</a></sup></p>
-<div class="admonition note">
-<p class="admonition-title">Vector spaces</p>
-<p>A <strong>vector space</strong> is a set <span class="arithmatex">\(V\)</span>, that has an <strong>addition operation</strong> (<span class="arithmatex">\(+\)</span>) and a <strong>scalar multiplication operation</strong> (<span class="arithmatex">\(\cdot\)</span>), for which the following eight axioms hold (assume that all symbols with an arrow (e.g. <span class="arithmatex">\(\vec{v}\)</span>) are elements of <span class="arithmatex">\(V\)</span>, and all lowercase symbols without an arrow (e.g. <span class="arithmatex">\(a\)</span>), are scalars):</p>
-<ol>
-<li>When adding elements, the order of the arguments doesn't matter: <span class="arithmatex">\(\vec{v} + \vec{u} = \vec{u} + \vec{v}\)</span></li>
-<li>When adding more than two arguments, it doesn't matter which two arguments we add together first: <span class="arithmatex">\((\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})\)</span></li>
-<li>There is a special element <span class="arithmatex">\(0 \in V\)</span> that, when added to any other element <span class="arithmatex">\(\vec{v} \in V\)</span>, leaves <span class="arithmatex">\(\vec{v}\)</span> unchanged: <span class="arithmatex">\(\vec{v} + 0 = \vec{v}\)</span></li>
-<li>Every single elements <span class="arithmatex">\(\vec{v} \in V\)</span> has an opposite <span class="arithmatex">\(-\vec{v} \in V\)</span>, so that when you add them together, you get <span class="arithmatex">\(0\)</span>: <span class="arithmatex">\(\vec{v} + (-\vec{v}) = 0\)</span></li>
-<li>When multiplying <span class="arithmatex">\(1\)</span> with any element <span class="arithmatex">\(\vec{v}\)</span>, that element remains unchanged: <span class="arithmatex">\(1 \cdot \vec{v} = \vec{v}\)</span></li>
-<li>There is a distributive rule for sums of scalars like so: <span class="arithmatex">\((a + b)\cdot\vec{v} = a \cdot \vec{v} + b \cdot \vec{v}\)</span></li>
-<li>When multiplying scalars and elements of <span class="arithmatex">\(V\)</span>, the order doesn't matter: <span class="arithmatex">\((a \cdot b) \cdot \vec{v} = a \cdot (b \cdot \vec{v})\)</span></li>
-<li>There is a distributive rule for sums of vectors like so: <span class="arithmatex">\(a \cdot (\vec{v} + \vec{u}) = a \cdot \vec{v} + a \cdot \vec{u}\)</span></li>
-</ol>
-</div>
-<p>I'm playing a little fast and loose with the term "scalar" here. At this point, just assume that a scalar is a real number.</p>
-<p>All of these properties probably feel quite trivial. There are some interesting things to note though. First, the way we've written it, whenever we use scalar multiplication we always write the scalar on the left and the element of <span class="arithmatex">\(V\)</span> on the right.</p>
-<p>Now, let's consider the set of all polynomials <span class="arithmatex">\(\mathcal{P}(x)\)</span>.</p>
-<p>Say we have two polynomials <span class="arithmatex">\(p_1(x)\)</span> and <span class="arithmatex">\(p_2(x)\)</span>. No matter what <span class="arithmatex">\(p_1(x)\)</span> and <span class="arithmatex">\(p_2(x)\)</span> actually are, the result will always be another polynomial, with the same degree as whichever of <span class="arithmatex">\(p_1(x)\)</span> or <span class="arithmatex">\(p_2(x)\)</span> had the highest degree. We can multiply a polynomial by a scalar.</p>
-<h2 id="references">References</h2>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:smits">
-<p>T. Smits. (2023). Abstract Linear Algebra [Online]. Available: <a href="https://www.math.ucla.edu/~tsmits/115coursenotes.pdf">https://www.math.ucla.edu/~tsmits/115coursenotes.pdf</a>&#160;<a class="footnote-backref" href="#fnref:smits" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<h1 id="hilbert-spaces">Hilbert spaces</h1>
+<p>"A Hilbert space is a <strong>vector space</strong> equipped with an <strong>inner product</strong> such that the norm, which is defined as <span class="arithmatex">\(|f| = \sqrt{f \cdot f}\)</span>, turns the space into a <strong>complete metric space</strong>"</p>
 
 
 
