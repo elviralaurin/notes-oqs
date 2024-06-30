@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://openquantumsystemsnotes.com/</loc>
-         <lastmod>2024-06-28</lastmod>
+         <lastmod>2024-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://openquantumsystemsnotes.com/abstract-vector-spaces/</loc>
-         <lastmod>2024-06-28</lastmod>
+         <lastmod>2024-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://openquantumsystemsnotes.com/hilbert-spaces/</loc>
-         <lastmod>2024-06-28</lastmod>
+         <lastmod>2024-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/infinite-dimensional-vector-spaces/</loc>
+         <lastmod>2024-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
