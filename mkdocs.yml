@@ -30,6 +30,7 @@ theme:
 nav:
   - Introduction: index.md
   - Abstract vector spaces: abstract-vector-spaces.md
+  - Infinite-dimensional vector spaces: infinite-dimensional-vector-spaces.md
   - Hilbert spaces: hilbert-spaces.md
 
 markdown_extensions:
