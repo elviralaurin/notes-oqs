@@ -31,6 +31,7 @@ nav:
   - Introduction: index.md
   - Abstract vector spaces: abstract-vector-spaces.md
   - Hilbert spaces: hilbert-spaces.md
+  - Bra-Ket notation: bra-ket-notation.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

@@ -12,9 +12,9 @@ For example, consider the vector space $R^3$. It contains any vector in any dire
 If we play around with vectors like this for a while, we will start noticing certain properties that seem to be universal for all vector spaces. Formally, there are eight such properties, and we'll use them as axioms for defining what a vector space actually is.
 
 ## What makes a vector space?
-!!! note "Vector spaces[^smits]"
+!!! note "Vector spaces"
 
-    A **vector space** is a set $V$, that has an **addition operation** ($+$) and a **scalar multiplication operation** ($\cdot$), for which the following eight axioms hold (assume that all symbols with an arrow &mdash; e.g. $\vec{v}$ &mdash; are elements of the set $V$, and all (lowercase) symbols without an arrow &mdash; e.g. $a$ &mdash; are scalars):
+    A **vector space** is a set $V$, that has an **addition operation** ($+$) and a **scalar multiplication operation** ($\cdot$), for which the following eight axioms hold (assume that all symbols with an arrow &mdash; e.g. $\vec{v}$ &mdash; are elements of the set $V$, and all (lowercase) symbols without an arrow &mdash; e.g. $a$ &mdash; are scalars)[\[1\]](#smits):
 
     1. When adding elements, the order of the arguments doesn't matter: $\vec{v} + \vec{u} = \vec{u} + \vec{v}$
     2. When adding more than two arguments, it doesn't matter which two arguments we add together first: $(\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$
@@ -52,5 +52,4 @@ Why, look at that! It seems that our set is a vector space.
 Well, now that we know that these polynomials really are just vector spaces in fancy outfits, we can apply all we know about "normal" vector spaces to them.
 
 ## References
-[^smits]:
-    T. Smits. (2023). Abstract Linear Algebra [Online]. Available: [https://www.math.ucla.edu/~tsmits/115coursenotes.pdf](https://www.math.ucla.edu/~tsmits/115coursenotes.pdf)
+<span id="smits">[1]</span> T. Smits. (2023). Abstract Linear Algebra [Online]. Available: [https://www.math.ucla.edu/~tsmits/115coursenotes.pdf](https://www.math.ucla.edu/~tsmits/115coursenotes.pdf)
