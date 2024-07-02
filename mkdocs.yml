@@ -30,8 +30,7 @@ theme:
 nav:
   - Introduction: index.md
   - Abstract vector spaces: abstract-vector-spaces.md
-  - Hilbert spaces: hilbert-spaces.md
-  - Bra-Ket notation: bra-ket-notation.md
+  - Quantum state space: quantum-state-space.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
