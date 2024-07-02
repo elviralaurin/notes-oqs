@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://openquantumsystemsnotes.com/hilbert-spaces/">
+        <link rel="canonical" href="https://openquantumsystemsnotes.com/quantum-state-space/">
       
       
-        <link rel="prev" href="../infinite-dimensional-vector-spaces/">
+        <link rel="prev" href="../abstract-vector-spaces/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Hilbert spaces - Notes for Open Quantum Systems</title>
+        <title>Quantum state space - Notes for Open Quantum Systems</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hilbert-spaces" class="md-skip">
+        <a href="#quantum-state-space" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hilbert spaces
+              Quantum state space
             
           </span>
         </div>
@@ -272,26 +272,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../infinite-dimensional-vector-spaces/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Infinite-dimensional vector spaces
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -304,15 +284,87 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quantum state space
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Hilbert spaces
+    Quantum state space
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vectors-in-state-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectors in state space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner products
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inner products">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Norm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -338,6 +390,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vectors-in-state-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectors in state space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner products
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inner products">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Norm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -351,8 +453,47 @@
                   
 
 
-<h1 id="hilbert-spaces">Hilbert spaces</h1>
-<p>"A Hilbert space is a <strong>vector space</strong> equipped with an <strong>inner product</strong> such that the norm, which is defined as <span class="arithmatex">\(|f| = \sqrt{f \cdot f}\)</span>, turns the space into a <strong>complete metric space</strong>"</p>
+<h1 id="quantum-state-space">Quantum state space</h1>
+<p>The mathematics of quantum mechanics is done in a special type of vector space we'll call <strong>quantum state space</strong>, or just <strong>state space</strong>.</p>
+<p>Formally, the state space will be different depending on the situation. As such, there really is no "the" state space, just the one we happen to be talking about at the moment. We will denote the state space at hand by <span class="arithmatex">\(\mathcal{H}\)</span>. Just remember that what <span class="arithmatex">\(\mathcal{H}\)</span> really is can be quite different depending on who you ask, and during what circumstances.</p>
+<p class="annotate">In these notes, we will try to be consistent in the use of <span class="arithmatex">\(\mathcal{H}\)</span>. What we generally refer to here as a state space <span class="arithmatex">\(\mathcal{H}\)</span> is a <strong>complete</strong>, <strong>separable</strong>, <strong>complex</strong>, possibly <strong>infinite-dimensional</strong> <strong>Hilbert<br />
+space</strong>(1).</p>
+<ol>
+<li>For details on what all these terms mean, see chapter 2 of <a href="#von-neumann">[1]</a>.</li>
+</ol>
+<p>If you're like me, that is a pretty hefty list of mathematical jargon, but the only word that is really relevant at this moment is <strong>complex</strong>. From now on, whenever we talk about numbers, we mean complex numbers, unless otherwise specified. That includes all scalars, vector components, etc.</p>
+<h2 id="vectors-in-state-space">Vectors in state space</h2>
+<p>As mentioned in the section about <a href="../abstract-vector-spaces/">abstract vector spaces</a>, the vectors of <span class="arithmatex">\(\mathcal{H}\)</span> aren't the familiar list-of-numbers we learn about in our basic linear algebra courses. But, we'll get the practicalities out of the way first.</p>
+<div class="admonition info">
+<p class="admonition-title">Kets</p>
+<p>The vectors of <span class="arithmatex">\(\mathcal{H}\)</span> are called <em>kets</em>, and are written using a pipe symbol (<code>|</code>), followed by the label of the ket, followed by a right angle bracket (<code>&gt;</code>):</p>
+<div class="arithmatex">\[
+\ket{\psi} \in \mathcal{H}.
+\]</div>
+</div>
+<p>We will usually label our kets with Greek letters, such as with <span class="arithmatex">\(\psi\)</span> ("psi") or <span class="arithmatex">\(\phi\)</span> ("phi"), but no matter what, the labels are just that &mdash; labels. You can name them <span class="arithmatex">\(\ket{\text{Erwin}}\)</span> or <span class="arithmatex">\(\ket{\text{Werner}}\)</span> for all anyone cares.</p>
+<div class="admonition warning">
+<p class="admonition-title">Quantum states <span class="arithmatex">\(\neq\)</span> elements of <span class="arithmatex">\(\mathcal{H}\)</span></p>
+<p>Even though we call <span class="arithmatex">\(\mathcal{H}\)</span> "quantum state space", the elements of <span class="arithmatex">\(\mathcal{H}\)</span> aren't quantum states, for reasons we'll get to later. For now we'll just say that the elements of state space are called kets, and get into the physical interpretation later.</p>
+</div>
+<h2 id="inner-products">Inner products</h2>
+<p>Just like we can take the dot product of two vectors in "normal" vector spaces, there is a corresponding operation in state space.</p>
+<p>The operation is called <strong>inner product</strong>, and isn't specific for quantum mechanics. In linear algebra, the inner product of two vectors <span class="arithmatex">\(\vec{u}\)</span> and <span class="arithmatex">\(\vec{v}\)</span> of some vector space <span class="arithmatex">\(V\)</span> is usually written as <span class="arithmatex">\((\vec{u}, \vec{v})\)</span>.</p>
+<p class="annotate">In quantum mechanics, we use a special notation called <strong>Dirac notation</strong> or <strong>Bra-Ket notation</strong>(1).</p>
+<ol>
+<li>"Bra-Ket" from the word "bracket" &mdash; we have already met the kets, and will talk about the bras in a little bit.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Inner product</p>
+<p>The inner product of two kets <span class="arithmatex">\(\ket{\psi}, \ket{\phi} \in \mathcal{H}\)</span> is written as:</p>
+<div class="arithmatex">\[
+(\ket{\psi}, \ket{\phi}) := \braket{\psi|\phi}
+\]</div>
+</div>
+<h3 id="norm">Norm</h3>
+<h2 id="references">References</h2>
+<!-- <span id="griffiths">[1]</span> D. J. Griffiths, D. F. Schroeter, *Introduction to Quantum Mechanics*, 3rd ed. Cambridge, U.K.: Cambridge Univ. Press, 2018, [doi: 10.1017/9781316995433](https://doi.org/10.1017/9781316995433). -->
+<p><span id="von-neumann">[1]</span> J. von Neumann, <em>Mathematical Foundations of Quantum Mechanics</em>, N. A. Wheeler, Ed., 2018 ed. Princeton, NJ, USA: Princeton Univ. Press, 2018, <a href="https://doi.org/10.1017/9781316995433">doi: 10.1017/9781316995433</a>.</p>
 
 
 
