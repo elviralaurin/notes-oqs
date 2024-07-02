@@ -49,7 +49,7 @@ Why, look at that! It seems that our set is a vector space.
 
 "Okay," you say. "So what?"
 
-Well, now that we know that these polynomials really are just vector spaces in fancy outfits, we can apply all we know about "normal" vector spaces to them.
+Well, now that we know that the set of these polynomials really is just a vector space in a fancy outfit, we can apply all we know about "normal" vector spaces to it. We would probably not normally think of polynomials as vectors, but we have just shown that we just might as well look at them through that lense. And maybe we'll spot something interesting when we do.
 
 ## References
 <span id="smits">[1]</span> T. Smits. (2023). Abstract Linear Algebra [Online]. Available: [https://www.math.ucla.edu/~tsmits/115coursenotes.pdf](https://www.math.ucla.edu/~tsmits/115coursenotes.pdf)

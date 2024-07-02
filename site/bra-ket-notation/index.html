@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://openquantumsystemsnotes.com/abstract-vector-spaces/">
+        <link rel="canonical" href="https://openquantumsystemsnotes.com/bra-ket-notation/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../hilbert-spaces/">
       
-      
-        <link rel="next" href="../hilbert-spaces/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Abstract vector spaces - Notes for Open Quantum Systems</title>
+        <title>Bra-Ket notation - Notes for Open Quantum Systems</title>
       
     
     
@@ -81,11 +79,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#abstract-vector-spaces" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -118,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Abstract vector spaces
+              Bra-Ket notation
             
           </span>
         </div>
@@ -254,30 +247,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Abstract vector spaces
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../abstract-vector-spaces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -286,62 +259,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-we-mean-by-abstract" class="md-nav__link">
-    <span class="md-ellipsis">
-      What we mean by "abstract"
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-makes-a-vector-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      What makes a vector space?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#thats-a-vector-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      That's a vector space?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -370,10 +287,17 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../bra-ket-notation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -382,6 +306,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -403,52 +328,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-we-mean-by-abstract" class="md-nav__link">
-    <span class="md-ellipsis">
-      What we mean by "abstract"
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-makes-a-vector-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      What makes a vector space?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#thats-a-vector-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      That's a vector space?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -463,51 +342,9 @@
                   
 
 
-<h1 id="abstract-vector-spaces">Abstract vector spaces</h1>
-<div class="admonition info">
-<p class="admonition-title">Why is this relevant?</p>
-<p>The language of quantum mechanics is linear algebra, and everything we do is done in special vector spaces called Hilbert spaces. Hilbert spaces can be infinite-dimensional (don't worry, we'll get there), and the "vectors" we work with aren't really vectors in the sense you'd learn about in a basic linear algebra course. Instead, they are functions.</p>
-</div>
-<h2 id="what-we-mean-by-abstract">What we mean by "abstract"</h2>
-<p>Abstract linear algebra is what happens when we do normal linear algebra, but we stop caring about the details of what a vector "actually" is. Instead, we just formulate a set of definitions (the same ones as in normal linear algebra, in fact), and base all our logic on those definitions - we make no additional assumptions about the underlying mathematical objects. In other words, we take the findings of normal linear algebra and abstract them so that we are able to apply them to a wider range of objects and topics.</p>
-<p>For example, consider the vector space <span class="arithmatex">\(R^3\)</span>. It contains any vector in any direction you can literally think of. You can add any two (or more) vectors, stretch or shrink them by multiplying them with scalars, all to your heart's content. Also, you can condense the information of a vector space into just a set of basis vectors, which you can then use as a kind of common language to express any vector in the space. The basis vectors can be arbitrarily chosen, as long as there is at least one representative of each direction of the space, which in math is called linear independence.</p>
-<p>If we play around with vectors like this for a while, we will start noticing certain properties that seem to be universal for all vector spaces. Formally, there are eight such properties, and we'll use them as axioms for defining what a vector space actually is.</p>
-<h2 id="what-makes-a-vector-space">What makes a vector space?</h2>
-<div class="admonition note">
-<p class="admonition-title">Vector spaces</p>
-<p>A <strong>vector space</strong> is a set <span class="arithmatex">\(V\)</span>, that has an <strong>addition operation</strong> (<span class="arithmatex">\(+\)</span>) and a <strong>scalar multiplication operation</strong> (<span class="arithmatex">\(\cdot\)</span>), for which the following eight axioms hold (assume that all symbols with an arrow &mdash; e.g. <span class="arithmatex">\(\vec{v}\)</span> &mdash; are elements of the set <span class="arithmatex">\(V\)</span>, and all (lowercase) symbols without an arrow &mdash; e.g. <span class="arithmatex">\(a\)</span> &mdash; are scalars)<a href="#smits">[1]</a>:</p>
-<ol>
-<li>When adding elements, the order of the arguments doesn't matter: <span class="arithmatex">\(\vec{v} + \vec{u} = \vec{u} + \vec{v}\)</span></li>
-<li>When adding more than two arguments, it doesn't matter which two arguments we add together first: <span class="arithmatex">\((\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})\)</span></li>
-<li>There is a special element <span class="arithmatex">\(\vec{0} \in V\)</span> that, when added to any other element <span class="arithmatex">\(\vec{v}\)</span>, leaves <span class="arithmatex">\(\vec{v}\)</span> unchanged: <span class="arithmatex">\(\vec{v} + \vec{0} = \vec{v}\)</span></li>
-<li>Every single element <span class="arithmatex">\(\vec{v}\)</span> has an opposite <span class="arithmatex">\(-\vec{v} \in V\)</span>, so that when you add them together, you get <span class="arithmatex">\(\vec{0}\)</span>: <span class="arithmatex">\(\vec{v} + (-\vec{v}) = \vec{0}\)</span></li>
-<li>When multiplying the scalar <span class="arithmatex">\(1\)</span> with any element <span class="arithmatex">\(\vec{v}\)</span>, that element remains unchanged: <span class="arithmatex">\(1 \cdot \vec{v} = \vec{v}\)</span></li>
-<li>There is a distributive rule for sums of scalars like so: <span class="arithmatex">\((a + b)\cdot\vec{v} = a \cdot \vec{v} + b \cdot \vec{v}\)</span></li>
-<li>When multiplying multiple scalars with elements of <span class="arithmatex">\(V\)</span>, the order doesn't matter: <span class="arithmatex">\((a \cdot b) \cdot \vec{v} = a \cdot (b \cdot \vec{v})\)</span></li>
-<li>There is a distributive rule for sums of elements like so: <span class="arithmatex">\(a \cdot (\vec{v} + \vec{u}) = a \cdot \vec{v} + a \cdot \vec{u}\)</span></li>
-</ol>
-</div>
-<p>I'm playing a little fast and loose with the term "scalar" here. At this point, just assume that a scalar is a real number.</p>
-<p>All of these properties probably feel quite trivial. There are some interesting things to note though. First, the way we've written it, whenever we use scalar multiplication we always write the scalar on the left and the element of <span class="arithmatex">\(V\)</span> on the right. Second &mdash; and most important &mdash; we're really not making any assumptions about the elements of <span class="arithmatex">\(V\)</span> at all. What this list of properties is really telling us are expectations about how the operations of addition and scalar multiplication behave. So what makes a vector space a vector space really isn't the vectors themselves; it's what we can do with them.</p>
-<h2 id="thats-a-vector-space"><em>That's</em> a vector space?</h2>
-<p>Let's consider the set of all polynomials of degree <span class="arithmatex">\(n \leq 2\)</span>. We'll denote this set as <span class="arithmatex">\(\mathcal{P}^2\)</span>.</p>
-<p>Let's grab three elements of <span class="arithmatex">\(\mathcal{P}^2\)</span>; call them <span class="arithmatex">\(p_1(x)\)</span>, <span class="arithmatex">\(p_2(x)\)</span>, and <span class="arithmatex">\(p_3(x)\)</span>.</p>
-<p>Is <span class="arithmatex">\(\mathcal{P}^2\)</span> a vector space? Let's check:</p>
-<ol>
-<li>Does the order matter when adding two elements, like <span class="arithmatex">\(p_1(x) + p_2(x)\)</span>? No, so <strong>check!</strong></li>
-<li>If we add more than two elements together, does the order in which we do things matter? Nope, so <strong>check!</strong></li>
-<li>Is there a weird element that leaves other elements unchanged when adding it to them? With all coefficients equal to 0, we just get zero, so zero is technically a polynomial in the set, so <strong>check!</strong></li>
-<li>Does every polynomial have an opposite, so that if we add it with its opposite we get zero? If we take a polynomial, copy it, and reverse the signs of all coefficients of the copy, then we get exactly such an opposite. So <strong>check!</strong></li>
-<li>If we multiply any polynomial with the scalar 1, we get that same polynomial back. So <strong>check!</strong></li>
-<li>Does the distributive rule for sums of scalars work as expected? <span class="arithmatex">\((a + b)p_1(x) = ap_1(x) + bp_1(x)\)</span>, so yup, and <strong>check!</strong></li>
-<li>Does the order matter when multiplying with more than one scalar? <span class="arithmatex">\((ab)p_1(x) = abp_1(x) = a(bp_1(x))\)</span> &mdash; it does not, so <strong>check!</strong></li>
-<li>Does the distributive rule for sums of elements work as expected? <span class="arithmatex">\(a(p_1(x) + p_2(x)) = ap_1(x) + ap_2(x)\)</span>, so yes it does &mdash; <strong>check!</strong></li>
-</ol>
-<p>Why, look at that! It seems that our set is a vector space.</p>
-<p>"Okay," you say. "So what?"</p>
-<p>Well, now that we know that these polynomials really are just vector spaces in fancy outfits, we can apply all we know about "normal" vector spaces to them.</p>
-<h2 id="references">References</h2>
-<p><span id="smits">[1]</span> T. Smits. (2023). Abstract Linear Algebra [Online]. Available: <a href="https://www.math.ucla.edu/~tsmits/115coursenotes.pdf">https://www.math.ucla.edu/~tsmits/115coursenotes.pdf</a></p>
+  <h1>Bra-Ket notation</h1>
+
+
 
 
 

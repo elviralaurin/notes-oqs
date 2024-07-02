@@ -14,9 +14,11 @@
         <link rel="prev" href="../abstract-vector-spaces/">
       
       
+        <link rel="next" href="../bra-ket-notation/">
+      
       
       <link rel="icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -24,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -99,7 +101,7 @@
     <a href=".." title="Notes for Open Quantum Systems" class="md-header__button md-logo" aria-label="Notes for Open Quantum Systems" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64 11 0 21.8-1.4 32-4v228c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 448h56c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-53 0-96-43-96-96V192.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7S50.5 94 68 96.2l7.9 1c48 6 84.1 46.8 84.1 95.3v85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5c-10 3.5-20.8 5.5-32 5.5-28.4 0-54-12.4-71.6-32-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128V10.7C352 4.8 356.7.1 362.6 0h.2c3.3 0 6.4 1.6 8.4 4.2v.1l12.8 17 27.2 36.3L416 64h64l4.8-6.4L512 21.3l12.8-17v-.1c2-2.6 5.1-4.2 8.4-4.2h.2c5.9.1 10.6 4.8 10.6 10.7V128c0 17.3-4.6 33.6-12.6 47.6-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0-32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64 11 0 21.8-1.4 32-4v228c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 448h56c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-53 0-96-43-96-96V192.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7S50.5 94 68 96.2l7.9 1c48 6 84.1 46.8 84.1 95.3v85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5c-10 3.5-20.8 5.5-32 5.5-28.4 0-54-12.4-71.6-32-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128V10.7C352 4.8 356.7.1 362.6 0h.2c3.3 0 6.4 1.6 8.4 4.2v.1l12.8 17 27.2 36.3L416 64h64l4.8-6.4L512 21.3l12.8-17v-.1c2-2.6 5.1-4.2 8.4-4.2h.2c5.9.1 10.6 4.8 10.6 10.7V128c0 17.3-4.6 33.6-12.6 47.6-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0-32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -179,7 +181,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -220,7 +222,7 @@
     <a href=".." title="Notes for Open Quantum Systems" class="md-nav__button md-logo" aria-label="Notes for Open Quantum Systems" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64 11 0 21.8-1.4 32-4v228c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 448h56c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-53 0-96-43-96-96V192.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7S50.5 94 68 96.2l7.9 1c48 6 84.1 46.8 84.1 95.3v85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5c-10 3.5-20.8 5.5-32 5.5-28.4 0-54-12.4-71.6-32-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128V10.7C352 4.8 356.7.1 362.6 0h.2c3.3 0 6.4 1.6 8.4 4.2v.1l12.8 17 27.2 36.3L416 64h64l4.8-6.4L512 21.3l12.8-17v-.1c2-2.6 5.1-4.2 8.4-4.2h.2c5.9.1 10.6 4.8 10.6 10.7V128c0 17.3-4.6 33.6-12.6 47.6-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0-32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64 11 0 21.8-1.4 32-4v228c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 448h56c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-53 0-96-43-96-96V192.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7S50.5 94 68 96.2l7.9 1c48 6 84.1 46.8 84.1 95.3v85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5c-10 3.5-20.8 5.5-32 5.5-28.4 0-54-12.4-71.6-32-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128V10.7C352 4.8 356.7.1 362.6 0h.2c3.3 0 6.4 1.6 8.4 4.2v.1l12.8 17 27.2 36.3L416 64h64l4.8-6.4L512 21.3l12.8-17v-.1c2-2.6 5.1-4.2 8.4-4.2h.2c5.9.1 10.6 4.8 10.6 10.7V128c0 17.3-4.6 33.6-12.6 47.6-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0-32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
 
     </a>
     Notes for Open Quantum Systems
@@ -284,6 +286,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hilbert spaces
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -294,6 +307,72 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vectors-in-hilbert-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectors in Hilbert space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner products
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bra-ket-notation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bra-Ket notation
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -318,6 +397,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vectors-in-hilbert-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectors in Hilbert space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner products
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -332,7 +446,32 @@
 
 
 <h1 id="hilbert-spaces">Hilbert spaces</h1>
+<p>The mathematics of quantum mechanics is done in a special type of vector space called a <strong>Hilbert space</strong>.</p>
+<p>The following is an incomplete description of what Hilbert spaces actually are, as the complete formalism is (so far) out of scope for what we're trying to accomplish. Whenever we say "Hilbert space" throughout these pages, we actually mean the <span class="arithmatex">\(L^2\)</span> space (the set of all square-integrable functions; see 3.1 of <a href="#griffiths">[1]</a>). We will denote this space with <span class="arithmatex">\(\mathcal{H}\)</span>, and it's the properties of this space that we're talking about below.</p>
+<h2 id="vectors-in-hilbert-space">Vectors in Hilbert space</h2>
+<p>As mentioned in the section about <a href="../abstract-vector-spaces/">abstract vector spaces</a>, the vectors of <span class="arithmatex">\(\mathcal{H}\)</span> aren't the familiar list-of-numbers we learn about in our basic linear algebra courses. Instead, they are <strong>complex functions</strong>, usually denoted by the uppercase Greek letter <span class="arithmatex">\(\Psi\)</span> (pronounced "psi") that map <strong>real scalars</strong> to <strong>complex scalars</strong>.</p>
+<p>By the way, from now on, whenever we mention "scalars", we mean <strong>complex</strong> scalars. Also, remember that the real numbers are a subset of the complex numbers. In other words, just because something is a complex number, it doesn't mean that it for sure contains <span class="arithmatex">\(i\)</span>.</p>
+<p>Quantum mechanics is &mdash; suprise, surprise &mdash; a branch of physics. We therefore generally want for the symbols we use to have real, physical interpretations. The objects or entities we will talk about tend to be particles, or rather, the state of particles.</p>
+<p>Now, repeat after me:</p>
+<div class="admonition info">
+<p class="admonition-title">Quantum states</p>
+<p>The <strong>state of a quantum particle</strong>, i.e. a <strong>quantum state</strong>, is a <strong>ray in complex Hilbert space</strong>.</p>
+</div>
+<p class="annotate">In order to explain what that means, we'll start off by being sloppy. Incorrectly, we could say that a vector in <span class="arithmatex">\(\mathcal{H}\)</span> is a quantum state, and usually we would denote such a thing as <span class="arithmatex">\(\ket{\psi}\)</span>.(1)</p>
+<ol>
+<li>Don't worry about the wonky notation just yet; it's called <em>Bra-Ket notation</em> and we'll talk about that in the <a href="../bra-ket-notation/">next section</a>.</li>
+</ol>
+<p>However, for reasons we have yet to get in to, if we take a scalar <span class="arithmatex">\(\lambda\)</span> (remember, scalars are complex from now on), and multiply that with the state <span class="arithmatex">\(\ket{\psi}\)</span>:</p>
+<div class="arithmatex">\[
+\lambda\ket{\psi},
+\]</div>
+<p>that expression has absolutely <strong>no physically observable difference</strong> to the original state <span class="arithmatex">\(\ket{\psi}\)</span>. Therefore, a single quantum state can be represented by an infinitude of different vectors, as long as the difference between those vectors is just a scalar factor <span class="arithmatex">\(\lambda\)</span>.</p>
+<p>The reason this matters is because if you were to answer the question "what is a quantum state" with "a vector in Hilbert space", that would be comparable to answering the question "what is a line" with "that dot over there". Well, not really, because a vector has a direction too, but the point remains.</p>
+<h2 id="inner-products">Inner products</h2>
+<p>We are used to being able to take the dot product of any two vectors in the context of "normal" vector spaces. In <span class="arithmatex">\(\mathcal{H}\)</span>, the corresponding operation is the <em>inner product</em>.</p>
 <p>"A Hilbert space is a <strong>vector space</strong> equipped with an <strong>inner product</strong> such that the norm, which is defined as <span class="arithmatex">\(|f| = \sqrt{f \cdot f}\)</span>, turns the space into a <strong>complete metric space</strong>"</p>
+<h2 id="references">References</h2>
+<p><span id="griffiths">[1]</span> D. J. Griffiths, D. F. Schroeter, <em>Introduction to Quantum Mechanics</em>, 3rd ed. Cambridge, U.K.: Cambridge Univ. Press, 2018, <a href="https://doi.org/10.1017/9781316995433">doi: 10.1017/9781316995433</a>.</p>
 
 
 
@@ -382,7 +521,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
