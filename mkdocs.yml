@@ -30,6 +30,7 @@ theme:
 nav:
   - Introduction: index.md
   - Fundamentals: fundamentals.md
+  - Algebra: algebra.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
