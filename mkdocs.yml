@@ -29,8 +29,7 @@ theme:
 
 nav:
   - Introduction: index.md
-  - Abstract vector spaces: abstract-vector-spaces.md
-  - Quantum state space: quantum-state-space.md
+  - Fundamentals: fundamentals.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
