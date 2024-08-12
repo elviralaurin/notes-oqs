@@ -1,5 +1,29 @@
-# Quantum state space
-The mathematics of quantum mechanics is done in a special type of vector space we'll call **quantum state space**, or just **state space** [[1]](#prof-m-dirac).
+# Fundamentals
+On this page, we start off with the basics of quantum mechanics (QM). As discussed on the [Reflections page](reflections.md), we will be a little loose with our definitions at first, but hopefully we'll be able to become more rigorous as we get a better understanding for what we're doing.
+
+## State vectors and Hilbert space
+The state of a closed physical system can be described by a *state vector* or *wave function* which is an element of some Hilbert space $\mathcal{H}$.
+
+!!! info "State vector? Ket? Wave function?"
+    What is really the difference between a state vector, a ket, and a wave function?
+
+    A **state vector** is a vector in Hilbert space that is associated with a physical state that the system can be in(1).
+    { .annotate }
+    
+    1.    Note that this does **not** mean that the state of the system necessarily corresponds to that exact vector. In other words, a state vector $\bar{v}$ corresponds to one specific physical state $V$ ($\bar{v} \rightarrow V$), but a physical state does not necessarily correspond to that same vector ($V \nrightarrow \bar{v})$. More on this later.
+
+    A **ket** is a state vector in Dirac notation.
+
+    A **wave function** is a complex-valued function that is a mathematical description of a quantum system. It is a different way of representing the state of a quantum system. It is less general than that of the vector representation, as it implicitly chooses a basis.
+
+<!-- ## Closed vs. open physical systems
+A physical system is *closed* if a given quantity of the system, such as matter, stays constant within the system. Nothing enters, nothing exits.
+
+The opposite of a closed physical system is an *open* physical system. As you can probably guess, a physical system is open if the system exchanges a given quantity with its environment. Humans are open physical systems &mdash; we constantly exchange energy and matter with our environment.
+
+Sometimes a system can be closed on one level, and open on another, or it can be closed to a certain quantity, and open to another. It's word that depends on the perspective. -->
+
+<!-- The mathematics of quantum mechanics is done in a special type of vector space we'll call **quantum state space**, or just **state space** [[1]](#prof-m-dirac).
 
 The details of the state space will differ depending on the situation. Not only that, but different people also seem to have quite different opinions on exactly what properties the state space has to have (or at least, which of those properties it is relevant to even mention).
 
@@ -78,5 +102,5 @@ For vectors in $\mathcal{H}$, we don't have the luxury of such simple interpreta
 
 ## References
 <!-- <span id="griffiths">[1]</span> D. J. Griffiths, D. F. Schroeter, *Introduction to Quantum Mechanics*, 3rd ed. Cambridge, U.K.: Cambridge Univ. Press, 2018, [doi: 10.1017/9781316995433](https://doi.org/10.1017/9781316995433). -->
-<span id="prof-m-dirac">[1]</span> Professor M does Science, Cambridge, U.K. *Dirac Notation: State Space And Dual Space*. (May 23, 2020). Accessed: Jul. 3, 2024. [Online Video]. Available: [https://www.youtube.com/watch?v=hJoWM9jf0gU](https://www.youtube.com/watch?v=hJoWM9jf0gU)  
-<span id="von-neumann">[2]</span> J. von Neumann, *Mathematical Foundations of Quantum Mechanics*, N. A. Wheeler, Ed., 2018 ed. Princeton, NJ, USA: Princeton Univ. Press, 2018, [doi: 10.1017/9781316995433](https://doi.org/10.1017/9781316995433).  
+<!-- <span id="prof-m-dirac">[1]</span> Professor M does Science, Cambridge, U.K. *Dirac Notation: State Space And Dual Space*. (May 23, 2020). Accessed: Jul. 3, 2024. [Online Video]. Available: [https://www.youtube.com/watch?v=hJoWM9jf0gU](https://www.youtube.com/watch?v=hJoWM9jf0gU)  
+<span id="von-neumann">[2]</span> J. von Neumann, *Mathematical Foundations of Quantum Mechanics*, N. A. Wheeler, Ed., 2018 ed. Princeton, NJ, USA: Princeton Univ. Press, 2018, [doi: 10.1017/9781316995433](https://doi.org/10.1017/9781316995433).   -->
