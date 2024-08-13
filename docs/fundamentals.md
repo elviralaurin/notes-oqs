@@ -4,6 +4,16 @@ On this page, we start off with the basics of quantum mechanics (QM). As discuss
 ## State vectors and Hilbert space
 The state of a closed physical system can be described by a *state vector* or *wave function* which is an element of some Hilbert space $\mathcal{H}$.
 
+Throughout these notes and in most other QM resources available, state vectors are written in *Dirac notation* and are then called *kets*. A ket is written with a vertical bar (`|`), followed by the name or label of the ket (often a Greek letter like $\psi$(1) or $\phi$(2)), followed by a right-angle bracket (`>`). The following is a ket: $\ket{\psi}$.
+{ .annotate }
+
+1.    pronounced "sy", "psy", "see", or "psee", depending on who you ask
+2.    pronounced "fy" or "fee", depending on who you ask
+
+$\mathcal{H}$ can be *infinite-dimensional*. If we think of vectors as an ordered list of numbers, this means that the list can be infinitely long. An equivalent way to think about it is that we might need an infinite number of basis vectors to represent a given vector in $\mathcal{H}$.
+
+Another important thing to remember about $\mathcal{H}$ is that whenever we talk about scalars, we mean complex scalars. In other words, vector components are complex, and the scalars we scale vectors with are complex, and so on. Always assume that the numbers we work with are complex, i.e. can include an imaginary term, **unless otherwise specified**.
+
 !!! info "State vector? Ket? Wave function?"
     What is really the difference between a state vector, a ket, and a wave function?
 
@@ -15,6 +25,51 @@ The state of a closed physical system can be described by a *state vector* or *w
     A **ket** is a state vector in Dirac notation.
 
     A **wave function** is a complex-valued function that is a mathematical description of a quantum system. It is a different way of representing the state of a quantum system. It is less general than that of the vector representation, as it implicitly chooses a basis.
+
+## The inner product
+Just like we can take the dot product of two vectors in Euclidian space, we can take what's called the *inner product* of two kets $\ket{\psi}$ and $\ket{\phi}$ in Hilbert space. The inner product of $\ket{\psi}$ and $\ket{\phi}$ is written $\braket{\psi | \phi}$, and results in a scalar:
+
+$$
+\text{inner_prod}(\ket{\psi}, \ket{\phi}) = \braket{\psi | \phi} = c,\quad\quad c \in \mathbb{C}.
+$$
+
+Typographically, taking the inner product looks like flipping the first ket and sticking it together with the second ket:
+
+$$
+\ket{\psi} \ket{\phi} \rightarrow \bra{\psi} \ket{\phi} \rightarrow \braket{\psi | \phi}
+$$
+
+This is no accident. That "flipped ket" $\bra{\phi}$ is called a *bra*, and sticking it together with a ket produces a *bra-ket* &mdash; a bracket. This is all part of Dirac notation, and this idea of bra-kets is why Dirac notation is also commonly called *bra-ket notation*.
+
+## Dual vectors and the adjoint space
+> To every ket, there corresponds a bra &mdash; *Professor M does Science*[[1]](#prof-m-dirac)
+
+Just like the kets live in state space $\mathcal{H}$, the bras live in a space we denote $\mathcal{H}^*$. This space is commonly called the *dual space*.
+
+Recall that in Euclidean space, the dot product of two vectors $\bar{u}$ and $\bar{v}$ can be thought of as multiplying the corresponding components and adding up the result:
+
+$$
+\bar{u} \cdot \bar{v} = [u_1, u_2, \dots, u_n] \cdot [v_1, v_2, \dots, v_n] = \sum_{i=1}^n{u_iv_i}.
+$$
+
+However, we can also think about it as a matrix multiplication where the first factor is a row vector and the second a column vector:
+
+$$
+\bar{u} \cdot \bar{v} =
+\begin{bmatrix}
+    u_1 & u_2 & \dots & u_n
+\end{bmatrix}
+\begin{bmatrix}
+    v_1\\
+    v_2\\
+    \vdots\\
+    v_n
+\end{bmatrix} = \sum_{i=1}^n{u_iv_i}.
+$$
+
+If vectors are thought of as column vectors by default, we can say that we "flipped" the first vector to turn it into a row vector in order to calculate the dot product. Mathematically, this "flipping" of column vectors to row vectors is done by taking the *transpose* of the vector. In other words, a column vector $\bar{v}$ has a corresponding row vector which is found by taking the transpose of the original vector: $\bar{v}^T$.
+
+The relationship between row and column vectors is similar to that of bras and kets, with one additional difference:
 
 <!-- ## Closed vs. open physical systems
 A physical system is *closed* if a given quantity of the system, such as matter, stays constant within the system. Nothing enters, nothing exits.
@@ -99,8 +154,8 @@ For vectors in $\mathcal{H}$, we don't have the luxury of such simple interpreta
     $$
 
     Of course, since the inner product always results in a non-negative real number, the norm is a non-negative real number.
-
+-->
 ## References
 <!-- <span id="griffiths">[1]</span> D. J. Griffiths, D. F. Schroeter, *Introduction to Quantum Mechanics*, 3rd ed. Cambridge, U.K.: Cambridge Univ. Press, 2018, [doi: 10.1017/9781316995433](https://doi.org/10.1017/9781316995433). -->
-<!-- <span id="prof-m-dirac">[1]</span> Professor M does Science, Cambridge, U.K. *Dirac Notation: State Space And Dual Space*. (May 23, 2020). Accessed: Jul. 3, 2024. [Online Video]. Available: [https://www.youtube.com/watch?v=hJoWM9jf0gU](https://www.youtube.com/watch?v=hJoWM9jf0gU)  
-<span id="von-neumann">[2]</span> J. von Neumann, *Mathematical Foundations of Quantum Mechanics*, N. A. Wheeler, Ed., 2018 ed. Princeton, NJ, USA: Princeton Univ. Press, 2018, [doi: 10.1017/9781316995433](https://doi.org/10.1017/9781316995433).   -->
+<span id="prof-m-dirac">[1]</span> Professor M does Science, Cambridge, U.K. *Dirac Notation: State Space And Dual Space*. (May 23, 2020). Accessed: Jul. 3, 2024. [Online Video]. Available: [https://www.youtube.com/watch?v=hJoWM9jf0gU](https://www.youtube.com/watch?v=hJoWM9jf0gU).
+<!-- <span id="von-neumann">[3]</span> J. von Neumann, *Mathematical Foundations of Quantum Mechanics*, N. A. Wheeler, Ed., 2018 ed. Princeton, NJ, USA: Princeton Univ. Press, 2018, [doi: 10.1017/9781316995433](https://doi.org/10.1017/9781316995433).   -->
