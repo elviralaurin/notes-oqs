@@ -1,4 +1,4 @@
-# The Algebraic Rules of Quantum Mechanics
+# Cheatsheet for Quantum Mechanics
 This page contains all the algebraic rules I have been able to identify so far.
 
 ## State vectors
