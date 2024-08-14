@@ -39,10 +39,36 @@ $$
 \ket{\psi} \ket{\phi} \rightarrow \bra{\psi} \ket{\phi} \rightarrow \braket{\psi | \phi}
 $$
 
-This is no accident. That "flipped ket" $\bra{\phi}$ is called a *bra*, and sticking it together with a ket produces a *bra-ket* &mdash; a bracket. This is all part of Dirac notation, and this idea of bra-kets is why Dirac notation is also commonly called *bra-ket notation*.
+This is no accident. That "flipped ket" $\bra{\phi}$ is called a *bra*, and sticking it together with a ket produces a *bra-ket* &mdash; a bracket. This is all part of Dirac notation, and this idea of brackets is why Dirac notation is also commonly called *bra-ket notation*.
+
+!!!info "Properties of the inner product"
+    The inner product $\braket{\psi | \phi}$ of kets $\ket{\psi}, \ket{\phi} \in \mathcal{H}$ has the following properties:
+    
+    **Conjugation**
+
+    We can invert the order of the arguments by taking the **complex conjugate** of the whole thing: $\braket{\psi | \phi} = (\braket{\phi | \psi})^*$, which is usually just written $\braket{\phi | \psi}^*$.
+
+    **Linearity in the second argument**
+
+    If we multiply the inner product with a scalar $a$, we can "move the scalar in" to the **second argument** like so:
+
+    $$
+    a\braket{\psi | \phi} = \bra{\psi} a(\ket{\phi}).
+    $$
+
+    Furthermore, if the **second argument** of the inner product is a sum of two kets, say $\ket{\phi} = \ket{\phi_1} + \ket{\phi_2}$, we can "distribute" the inner product like so:
+
+    $$
+    \bra{\psi} \Bigl(\ket{\phi_1} + \ket{\phi_2}\Bigr) = \braket{\psi | \phi_1} + \braket{\psi | \phi_2}.
+    $$
+
+    As you can see from my choice of words above, I like thinking about this property as corresponding to distributing over parentheses in "regular algebra":
+    
+    ![Distribution of a scalar over a parenthesis, a bracket, and of a bra over a sum of kets](images/inprod-distr-comp1.png){ width="300" loading=lazy }
 
 ## Dual vectors and the adjoint space
-> To every ket, there corresponds a bra &mdash; *Professor M does Science*[[1]](#prof-m-dirac)
+!!! quote " "
+    "To every ket, there corresponds a bra" &mdash; *Professor M does Science*[[1]](#prof-m-dirac)
 
 Just like the kets live in state space $\mathcal{H}$, the bras live in a space we denote $\mathcal{H}^*$. This space is commonly called the *dual space*.
 
@@ -71,6 +97,14 @@ If vectors are thought of as column vectors by default, we can say that we "flip
 
 The relationship between row and column vectors is similar to that of bras and kets, with one additional difference:
 
+!!! info "Column vs. row vector, ket vs. bra"
+    Let $a_r \in \mathbb{R}$ and $a_c \in \mathbb{C}$ be scalars.
+
+    In Euclidean space, given a column vector $a_r\bar{v} \in \mathbb{R}^n$, the corresponding row vector is given by $a_r\bar{v}^T \in \mathbb{R}^{1 \times n}$. When going from column vector to row vector, we leave the scalar unchanged.
+
+    In state space, given a ket $a_c\ket{\psi} \in \mathcal{H}$, the corresponding bra is given by $a_c^*\bra{\psi} \in \mathcal{H}^*$. When going from ket to bra, we have to take the **complex conjugate** of the scalar: $a_c$ becomes $a_c^*$.
+
+The reason why we have to take the complex conjugate of any scalars when finding the corresponding bra to a ket comes from the definition of the inner product.
 <!-- ## Closed vs. open physical systems
 A physical system is *closed* if a given quantity of the system, such as matter, stays constant within the system. Nothing enters, nothing exits.
 
