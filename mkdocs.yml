@@ -44,6 +44,7 @@ nav:
     - State vectors and Hilbert space: fundamentals/state-vectors-hilbert-space.md
     - Inner product: fundamentals/inner-product.md
     - Dual space: fundamentals/dual-space.md
+    - Operators: fundamentals/operators.md
   - Cheatsheet: cheatsheet.md
 
 markdown_extensions:

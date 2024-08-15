@@ -5,7 +5,10 @@
 Just like the kets live in state space $\mathcal{H}$, the bras live in a space we denote $\mathcal{H}^*$. This space is commonly called the *dual space*(1).
 { .annotate }
 
-1.    It's actually a bit misleading to call it "the" dual space, as all vector spaces has a dual space.
+1.    It's actually a bit misleading to call it *the* dual space, as all vector spaces has a dual space. When we talk about dual spaces in QM, at least in these notes, what we mean is really just the space of all bras, i.e. the *linear functionals* to the kets. Search for the "Riesz representation theorem" for more information.
+
+!!! note
+    The dual space $\mathcal{H}^*$ is also a Hilbert space!
 
 Recall that in Euclidean space, the dot product of two vectors $\bar{u}$ and $\bar{v}$ can be thought of as multiplying the corresponding components and adding up the result:
 
