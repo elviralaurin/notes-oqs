@@ -1,0 +1,2 @@
+# Fundamentals
+On the following pages, we start off with the basics of quantum mechanics (QM). As discussed on the [Reflections page](../reflections.md), we will be a little loose with our definitions at first, but hopefully we'll be able to become more rigorous as we get a better understanding for what we're doing.

@@ -1,7 +1,4 @@
-# Fundamentals
-On this page, we start off with the basics of quantum mechanics (QM). As discussed on the [Reflections page](reflections.md), we will be a little loose with our definitions at first, but hopefully we'll be able to become more rigorous as we get a better understanding for what we're doing.
-
-## State vectors and Hilbert space
+# State vectors and Hilbert space
 The state of a closed physical system can be described by a *state vector* or *wave function* which is an element of some Hilbert space $\mathcal{H}$.
 
 Throughout these notes and in most other QM resources available, state vectors are written in *Dirac notation* and are then called *kets*. A ket is written with a vertical bar (`|`), followed by the name or label of the ket (often a Greek letter like $\psi$(1) or $\phi$(2)), followed by a right-angle bracket (`>`). The following is a ket: $\ket{\psi}$.
@@ -13,6 +10,10 @@ Throughout these notes and in most other QM resources available, state vectors a
 $\mathcal{H}$ can be *infinite-dimensional*. If we think of vectors as an ordered list of numbers, this means that the list can be infinitely long. An equivalent way to think about it is that we might need an infinite number of basis vectors to represent a given vector in $\mathcal{H}$.
 
 Another important thing to remember about $\mathcal{H}$ is that whenever we talk about scalars, we mean complex scalars. In other words, vector components are complex, and the scalars we scale vectors with are complex, and so on. Always assume that the numbers we work with are complex, i.e. can include an imaginary term, **unless otherwise specified**.
+
+Just like with vectors in Euclidean space, we can scale state vectors by multiplying them with scalars. We can also add state vectors together, and the result will be another state vector.
+
+If a state vector is written as a linear combination of other state vectors, we say that the former is a **superposition** of the latter. For example, if we have a state $\ket{\psi} = a\ket{\psi_1} + b\ket{\psi_2}$, we would say that $\ket{\psi}$ is a superposition of $\ket{\psi_1}$ and $\ket{\psi_2}$.
 
 !!! info "State vector? Ket? Wave function?"
     What is really the difference between a state vector, a ket, and a wave function?
@@ -26,85 +27,6 @@ Another important thing to remember about $\mathcal{H}$ is that whenever we talk
 
     A **wave function** is a complex-valued function that is a mathematical description of a quantum system. It is a different way of representing the state of a quantum system. It is less general than that of the vector representation, as it implicitly chooses a basis.
 
-## The inner product
-Just like we can take the dot product of two vectors in Euclidian space, we can take what's called the *inner product* of two kets $\ket{\psi}$ and $\ket{\phi}$ in Hilbert space. The inner product of $\ket{\psi}$ and $\ket{\phi}$ is written $\braket{\psi | \phi}$, and results in a scalar:
-
-$$
-\text{inner_prod}(\ket{\psi}, \ket{\phi}) = \braket{\psi | \phi} = c,\quad\quad c \in \mathbb{C}.
-$$
-
-Typographically, taking the inner product looks like flipping the first ket and sticking it together with the second ket:
-
-$$
-\ket{\psi} \ket{\phi} \rightarrow \bra{\psi} \ket{\phi} \rightarrow \braket{\psi | \phi}
-$$
-
-This is no accident. That "flipped ket" $\bra{\phi}$ is called a *bra*, and sticking it together with a ket produces a *bra-ket* &mdash; a bracket. This is all part of Dirac notation, and this idea of brackets is why Dirac notation is also commonly called *bra-ket notation*.
-
-!!!info "Properties of the inner product"
-    The inner product $\braket{\psi | \phi}$ of kets $\ket{\psi}, \ket{\phi} \in \mathcal{H}$ has the following properties:
-    
-    **Conjugation**
-
-    We can invert the order of the arguments by taking the **complex conjugate** of the whole thing: $\braket{\psi | \phi} = (\braket{\phi | \psi})^*$, which is usually just written $\braket{\phi | \psi}^*$.
-
-    **Linearity in the second argument**
-
-    If we multiply the inner product with a scalar $a$, we can "move the scalar in" to the **second argument** like so:
-
-    $$
-    a\braket{\psi | \phi} = \bra{\psi} a(\ket{\phi}).
-    $$
-
-    Furthermore, if the **second argument** of the inner product is a sum of two kets, say $\ket{\phi} = \ket{\phi_1} + \ket{\phi_2}$, we can "distribute" the inner product like so:
-
-    $$
-    \bra{\psi} \Bigl(\ket{\phi_1} + \ket{\phi_2}\Bigr) = \braket{\psi | \phi_1} + \braket{\psi | \phi_2}.
-    $$
-
-    As you can see from my choice of words above, I like thinking about this property as corresponding to distributing over parentheses in "regular algebra":
-    
-    ![Distribution of a scalar over a parenthesis, a bracket, and of a bra over a sum of kets](images/inprod-distr-comp1.png){ width="300" loading=lazy }
-
-## Dual vectors and the adjoint space
-!!! quote " "
-    "To every ket, there corresponds a bra" &mdash; *Professor M does Science*[[1]](#prof-m-dirac)
-
-Just like the kets live in state space $\mathcal{H}$, the bras live in a space we denote $\mathcal{H}^*$. This space is commonly called the *dual space*.
-
-Recall that in Euclidean space, the dot product of two vectors $\bar{u}$ and $\bar{v}$ can be thought of as multiplying the corresponding components and adding up the result:
-
-$$
-\bar{u} \cdot \bar{v} = [u_1, u_2, \dots, u_n] \cdot [v_1, v_2, \dots, v_n] = \sum_{i=1}^n{u_iv_i}.
-$$
-
-However, we can also think about it as a matrix multiplication where the first factor is a row vector and the second a column vector:
-
-$$
-\bar{u} \cdot \bar{v} =
-\begin{bmatrix}
-    u_1 & u_2 & \dots & u_n
-\end{bmatrix}
-\begin{bmatrix}
-    v_1\\
-    v_2\\
-    \vdots\\
-    v_n
-\end{bmatrix} = \sum_{i=1}^n{u_iv_i}.
-$$
-
-If vectors are thought of as column vectors by default, we can say that we "flipped" the first vector to turn it into a row vector in order to calculate the dot product. Mathematically, this "flipping" of column vectors to row vectors is done by taking the *transpose* of the vector. In other words, a column vector $\bar{v}$ has a corresponding row vector which is found by taking the transpose of the original vector: $\bar{v}^T$.
-
-The relationship between row and column vectors is similar to that of bras and kets, with one additional difference:
-
-!!! info "Column vs. row vector, ket vs. bra"
-    Let $a_r \in \mathbb{R}$ and $a_c \in \mathbb{C}$ be scalars.
-
-    In Euclidean space, given a column vector $a_r\bar{v} \in \mathbb{R}^n$, the corresponding row vector is given by $a_r\bar{v}^T \in \mathbb{R}^{1 \times n}$. When going from column vector to row vector, we leave the scalar unchanged.
-
-    In state space, given a ket $a_c\ket{\psi} \in \mathcal{H}$, the corresponding bra is given by $a_c^*\bra{\psi} \in \mathcal{H}^*$. When going from ket to bra, we have to take the **complex conjugate** of the scalar: $a_c$ becomes $a_c^*$.
-
-The reason why we have to take the complex conjugate of any scalars when finding the corresponding bra to a ket comes from the definition of the inner product.
 <!-- ## Closed vs. open physical systems
 A physical system is *closed* if a given quantity of the system, such as matter, stays constant within the system. Nothing enters, nothing exits.
 

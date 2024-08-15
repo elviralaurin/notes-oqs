@@ -8,5 +8,5 @@ Please note that I am writing these notes as I myself am learning the topic. I a
 
 All mistakes are my own. If you spot an error or disagree with anything, please leave a comment or a pull request in the [GitHub repository for this project](https://github.com/elviralaurin/notes-oqs).
 
-!!! info "Reflections"
+!!! aside "Reflections"
     During the writing of these notes, I'm keeping a log of sorts of some of my reflections on the page [Reflections](reflections.md).

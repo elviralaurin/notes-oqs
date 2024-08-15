@@ -23,19 +23,34 @@ theme:
         icon: octicons/sun-24
         name: Switch to light mode
   favicon: images/favicon.png
+
+  features:
+    - toc.follow
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.top
+
   icon:
     logo: fontawesome/solid/cat
     annotation: octicons/question-24
 
 nav:
-  - Cheatsheet: cheatsheet.md
   - Introduction: index.md
-  - Fundamentals: fundamentals.md
+  - Fundamentals:
+    - fundamentals/index.md
+    - State vectors and Hilbert space: fundamentals/state-vectors-hilbert-space.md
+    - Inner product: fundamentals/inner-product.md
+    - Dual space: fundamentals/dual-space.md
+  - Cheatsheet: cheatsheet.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - md_in_html
+  - toc
   - abbr
   - admonition
   - pymdownx.snippets
