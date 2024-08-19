@@ -62,9 +62,11 @@ The expression $\bra{\psi} \bigl(\hat{A}\ket{\phi}\bigr)$ is by definition equiv
 We know that an operator $\hat{A}$ acts on a ket to produce another ket: $\hat{A}\ket{\psi} = \ket{\psi'}$. However, we don't yet have a corresponding way of talking about how operators act on bras to produce other bras.
 
 !!! info "Adjoint operator"
-    Let $\ket{\psi'} = \hat{A}\ket{\psi}$ be a ket in state space $\mathcal{H}$. Then, $\bra{\psi'} = \hat{A}^\dagger\bra{\psi}$ is the corresponding bra in dual space $\mathcal{H}^*$.
+    Let $\ket{\psi'} = \hat{A}\ket{\psi}$ be a ket in state space $\mathcal{H}$. Then, $\bra{\psi'} = \bra{\psi}\hat{A}^\dagger$ is the corresponding bra in dual space $\mathcal{H}^*$.
     
-    $\hat{A}^\dagger$ is called the **adjoint operator**, and just like other operators in QM, it is **linear**. With $\bra{\psi} = a_1\bra{\psi_1} + a_2\bra{\psi_2}$, we can distribute $\hat{A}^\dagger$ to the left onto bras within parentheses like so:
+    $\hat{A}^\dagger$ is called the **adjoint operator**, and it is defined by taking the transpose of original operator and then taking the complex conjugate of each of its elements.
+    
+    Just like other operators in QM, the adjoint operator is **linear**. With $\bra{\psi} = a_1\bra{\psi_1} + a_2\bra{\psi_2}$, we can distribute $\hat{A}^\dagger$ to the left onto bras within parentheses like so:
 
     $$
     \bra{\psi}\hat{A}^\dagger = \bigl(a_1\bra{\psi_1} + a_2\bra{\psi_2}\bigr)\hat{A}^\dagger = a_1\bra{\psi_1}\hat{A}^\dagger + a_2\bra{\psi_2}\hat{A}^\dagger

@@ -50,3 +50,51 @@ Let $\hat{A}$, $\hat{B}$, and $\hat{C}$ be linear operators acting on $\mathcal{
     
     - associative: $\hat{A}(\hat{B}\hat{C}) = (\hat{A}\hat{B})\hat{C}$;
     - **NOT** necessarily commutative: $\hat{A}\hat{B} \neq \hat{B}\hat{A}$.
+
+!!! info "Conjugation of the matrix element"
+    For a matrix element $\bra{\psi} \hat{A} \ket{\phi} \in \mathbb{C}$, it is the case that:
+
+    $$
+    \bra{\psi} \hat{A} \ket{\phi} = \bra{\phi} \hat{A}^\dagger \ket{\psi}^*
+    $$
+
+!!! info "Inverse operators"
+    The **inverse** $\hat{A}^{-1}$ of an operator $\hat{A}$ is defined by:
+
+    $$
+    \hat{A}^{-1}\hat{A} = \hat{A}\hat{A}^{-1} = \mathbb{1},
+    $$
+
+    where $\mathbb{1}$ is the identity matrix.
+
+!!! info "Hermitian operators"
+    An operator $\hat{A}$ is **Hermitian** if it is equal to its adjoint:
+
+    $$
+    \hat{A} = \hat{A}^\dagger.
+    $$
+
+!!! info "Unitary operators"
+    An operator $\hat{U}$ is **unitary** if it is equal to its inverse:
+
+    $$
+    \hat{U} = \hat{U}^{-1},
+    $$
+
+    or, equivalently,
+
+    $$
+    \hat{U}^\dagger\hat{U} = \hat{U}\hat{U}^\dagger = \mathbb{1},
+    $$
+
+!!! info "Adjoint operator"
+    For two operators $\hat{A}$ and $\hat{B}$, the following are true:
+
+    $$
+    \begin{align}
+        (\hat{A}^\dagger)^\dagger = \hat{A},\\
+        (a\hat{A})^\dagger = a^*\hat{A}^\dagger,\\
+        (\hat{A} + \hat{B})^\dagger = \hat{A}^\dagger + \hat{B}^\dagger,\\
+        (\hat{A}\hat{B})^\dagger = \hat{B}^\dagger\hat{A}^\dagger.
+    \end{align}
+    $$
