@@ -62,10 +62,10 @@ Let $\hat{A}$, $\hat{B}$, and $\hat{C}$ be linear operators acting on $\mathcal{
     The **inverse** $\hat{A}^{-1}$ of an operator $\hat{A}$ is defined by:
 
     $$
-    \hat{A}^{-1}\hat{A} = \hat{A}\hat{A}^{-1} = \mathbb{1},
+    \hat{A}^{-1}\hat{A} = \hat{A}\hat{A}^{-1} = \mathbb{I},
     $$
 
-    where $\mathbb{1}$ is the identity matrix.
+    where $\mathbb{I}$ is the identity matrix.
 
 !!! info "Hermitian operators"
     An operator $\hat{A}$ is **Hermitian** if it is equal to its adjoint:
@@ -84,7 +84,7 @@ Let $\hat{A}$, $\hat{B}$, and $\hat{C}$ be linear operators acting on $\mathcal{
     or, equivalently,
 
     $$
-    \hat{U}^\dagger\hat{U} = \hat{U}\hat{U}^\dagger = \mathbb{1},
+    \hat{U}^\dagger\hat{U} = \hat{U}\hat{U}^\dagger = \mathbb{I}.
     $$
 
 !!! info "Adjoint operator"
@@ -104,4 +104,18 @@ Let $\hat{A}$, $\hat{B}$, and $\hat{C}$ be linear operators acting on $\mathcal{
 
     $$
     \braket{u_j | \psi} = c_i.
+    $$
+
+!!! info "Adjoint of outer product"
+    Taking the adjoint of an outer product reverses the terms:
+
+    $$
+    \bigl(\ket{\phi}\bra{\psi}\bigr)^\dagger = \ket{\psi}\bra{\phi}.
+    $$
+
+!!! info "Resolution of the identity"
+    The **identity operator** $\mathbb{I}$ can be written as an outer product like so:
+
+    $$
+    \mathbb{I} = \sum_i{\ket{u_i}\bra{u_i}}.
     $$

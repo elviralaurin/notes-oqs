@@ -45,6 +45,7 @@ nav:
     - Inner product: fundamentals/inner-product.md
     - Dual space: fundamentals/dual-space.md
     - Operators: fundamentals/operators.md
+    - Outer product: fundamentals/outer-product.md
     - Orthonormal bases: fundamentals/orthonormal-bases.md
   - Cheatsheet: cheatsheet.md
 

@@ -6,7 +6,10 @@ In the vast majority of cases, we'll be dealing with orthonormal bases:
 !!! info "Orthonormal basis"
     A set of vectors $\{\ket{u_i}\}$ is an **orthonormal basis** to $\mathcal{H}$ if the vectors are mutually orthogonal ($\braket{u_i | u_j} = 0, i \neq j$) and all are normalized ($\braket{u_i | u_i} = 1$).
 
-    We can summarize the properties of an orthonormal basis using the **Kroenecker delta** $\delta_{ij}$, which is defined as:
+    We can summarize the properties of an orthonormal basis using the **Kroenecker delta** $\delta_{ij}$, which is defined as(1):
+    { .annotate }
+
+    1.    I like to think about it as "equals" for the indices $i$ and $j$, returning 1 for "true" and 0 for "false": `i == j ? 1 : 0`
 
     $$
     \delta_{ij} =
@@ -40,3 +43,21 @@ where $c_i$ is the expansion coefficient for the $i$th basis vector $\ket{u_i}$.
     $$
 
     Note that in the second to last step, $\delta_{ij} = 0$ for every single term for which $i \neq j$. This leaves only one term in the sum: the one where $i = j$, which makes $\delta_{ij} = 1$, which results in $c_i\delta_{ij} = c_i \cdot 1 = c_i$.
+
+!!! example "Writing a state vector in a particular basis"
+    Say we have the ket $\ket{\psi}$. We can write it in the orthonormal basis $\{\ket{u_i}\}$ like so:
+
+    $$
+    \ket{\psi} = \sum_i{c_i\ket{u_i}}, \quad\quad c_i = \braket{u_i | \psi}.
+    $$
+
+We now know how to represent a given ket in a specific basis. How about the bras? If we have a bra $\bra{\psi} \in \mathcal{H}^*$:
+
+$$
+\begin{align}
+    \bra{\psi} &=\\
+    \bra{\psi}\mathbb{I} &=\\
+    \bra{\psi} \sum_i{\Bigl(\ket{u_i}\bra{u_i}\Bigr)} &=\\
+    \sum_i{\Bigl(\braket{\psi | u_i}\bra{u_i}\Bigr)}.
+\end{align}
+$$
