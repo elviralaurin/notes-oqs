@@ -98,3 +98,10 @@ Let $\hat{A}$, $\hat{B}$, and $\hat{C}$ be linear operators acting on $\mathcal{
         (\hat{A}\hat{B})^\dagger = \hat{B}^\dagger\hat{A}^\dagger.
     \end{align}
     $$
+
+!!! info "Finding the expansion coefficients of a state"
+    The expansion coefficients $c_i$ of a state vector $\ket{\psi}$ in an orthonormal basis $\{u_i\}$ can be found by projecting $\ket{\psi}$ onto the basis:
+
+    $$
+    \braket{u_j | \psi} = c_i.
+    $$
