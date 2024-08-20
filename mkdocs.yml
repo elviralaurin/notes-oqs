@@ -46,7 +46,7 @@ nav:
     - Dual space: fundamentals/dual-space.md
     - Operators: fundamentals/operators.md
     - Outer product: fundamentals/outer-product.md
-    - Orthonormal bases: fundamentals/orthonormal-bases.md
+    - Change of basis: fundamentals/change-of-basis.md
   - Cheatsheet: cheatsheet.md
 
 markdown_extensions:

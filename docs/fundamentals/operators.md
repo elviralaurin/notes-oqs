@@ -72,6 +72,8 @@ We know that an operator $\hat{A}$ acts on a ket to produce another ket: $\hat{A
     \bra{\psi}\hat{A}^\dagger = \bigl(a_1\bra{\psi_1} + a_2\bra{\psi_2}\bigr)\hat{A}^\dagger = a_1\bra{\psi_1}\hat{A}^\dagger + a_2\bra{\psi_2}\hat{A}^\dagger
     $$
 
+    This structure is called the matrix element because in the matrix formulation of quantum mechanics, this is exactly what the elements of an operator expressed as a matrix are.
+
 !!! info "Observables = Hermitian operators"
     In QM, all operators are observables &mdash; they are measurable properties of physical systems. In order for this to be true, the operators we deal with are all **equal to their own adjoints**:
 

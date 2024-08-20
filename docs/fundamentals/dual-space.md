@@ -46,3 +46,6 @@ The reason why we have to take the complex conjugate of any scalars when finding
 { .annotate }
 
 1.    For more information on why this is, check out [Professor M does Science's video on YouTube](https://www.youtube.com/watch?v=hJoWM9jf0gU) from timestamp 10:05 onwards.
+
+## References
+<span id="prof-m-dirac">[1]</span> Professor M does Science, Cambridge, U.K. *Dirac Notation: State Space And Dual Space*. (May 23, 2020). Accessed: Jul. 3, 2024. [Online Video]. Available: [https://www.youtube.com/watch?v=hJoWM9jf0gU](https://www.youtube.com/watch?v=hJoWM9jf0gU).

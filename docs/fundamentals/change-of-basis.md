@@ -1,4 +1,4 @@
-# Orthonormal bases
+# Change of basis
 A state vector $\ket{\psi}$ can be written in terms of a set of basis vectors $\{\ket{u_i}\}$, which spans $\mathcal{H}$.
 
 In the vast majority of cases, we'll be dealing with orthonormal bases:
@@ -44,20 +44,44 @@ where $c_i$ is the expansion coefficient for the $i$th basis vector $\ket{u_i}$.
 
     Note that in the second to last step, $\delta_{ij} = 0$ for every single term for which $i \neq j$. This leaves only one term in the sum: the one where $i = j$, which makes $\delta_{ij} = 1$, which results in $c_i\delta_{ij} = c_i \cdot 1 = c_i$.
 
-!!! example "Writing a state vector in a particular basis"
-    Say we have the ket $\ket{\psi}$. We can write it in the orthonormal basis $\{\ket{u_i}\}$ like so:
+Say we have the ket $\ket{\psi}$. We can write it in the orthonormal basis $\{\ket{u_i}\}$ like so:
 
-    $$
-    \ket{\psi} = \sum_i{c_i\ket{u_i}}, \quad\quad c_i = \braket{u_i | \psi}.
-    $$
+$$
+\ket{\psi} = \sum_i{c_i\ket{u_i}}, \quad\quad c_i = \braket{u_i | \psi}.
+$$
 
-We now know how to represent a given ket in a specific basis. How about the bras? If we have a bra $\bra{\psi} \in \mathcal{H}^*$:
+We now know how to represent a given ket in a specific basis. How about the bras?
+
+Say we have a ket $\ket{\psi} = \sum_i{c_i\ket{u_i}} \in \mathcal{H}$, with expansion coefficients $c_i = \braket{u_i | \psi}$. The corresponding a bra $\bra{\psi} \in \mathcal{H}^*$ can then be written:
 
 $$
 \begin{align}
     \bra{\psi} &=\\
     \bra{\psi}\mathbb{I} &=\\
     \bra{\psi} \sum_i{\Bigl(\ket{u_i}\bra{u_i}\Bigr)} &=\\
-    \sum_i{\Bigl(\braket{\psi | u_i}\bra{u_i}\Bigr)}.
+    \sum_i{\Bigl(\braket{\psi | u_i}\bra{u_i}\Bigr)} &=\\
+    \sum_i{\Bigl(\braket{u_i | \psi}^*\bra{u_i}\Bigr)} &=\\
+    \sum_i{\Bigl(c_i^*\bra{u_i}\Bigr)}.
 \end{align}
 $$
+
+Finally, we want to be able to express operators in terms of a specific basis.
+
+!!! info "Writing an operator in a particular orthonormal basis"
+    We can write an operator $\hat{A}\ket{\psi} = \ket{\psi'}$ in a particular orthonormal basis $\{\ket{u_i}\}$ like so(1):
+    { .annotate }
+
+    1.    See [[1]](#prof-m-matrix) for proof.
+
+    $$
+    \hat{A} = \sum_{ij}{\ket{u_i}\bra{u_i}\hat{A}\ket{u_j}\bra{u_j}},
+    $$
+    
+    which, if we let $A_{ij}$ be the matrix element $\bra{u_i}\hat{A}\ket{u_j}$, becomes:
+
+    $$
+    \hat{A} = \sum_{ij}{A_{ij}\ket{u_i}\bra{u_j}}.
+    $$
+
+## References
+<span id="prof-m-matrix">[1]</span> Professor M does Science, Cambridge, U.K. *Matrix formulation of quantum mechanics*. (June 24, 2020). Accessed: Aug. 20, 2024. [Online Video]. Available: [https://youtu.be/wIwnb1ldYTI](https://youtu.be/wIwnb1ldYTI).

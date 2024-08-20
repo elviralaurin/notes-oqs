@@ -119,3 +119,17 @@ Let $\hat{A}$, $\hat{B}$, and $\hat{C}$ be linear operators acting on $\mathcal{
     $$
     \mathbb{I} = \sum_i{\ket{u_i}\bra{u_i}}.
     $$
+
+!!! info "Writing a ket in a particular orthonormal basis"
+    A ket $\ket{\psi} \in \mathcal{H}$ can be written in the orthonormal basis $\{\ket{u_i}\}$ like so:
+
+    $$
+    \ket{\psi} = \sum_i{c_i\ket{u_i}}, \quad\quad c_i = \braket{u_i | \psi}.
+    $$
+
+!!! info "Writing a bra in a particular orthonormal basis"
+    A bra $\bra{\psi} \in \mathcal{H}^*$ can be written in the orthonormal basis $\{\ket{u_i}\}$ like so:
+
+    $$
+    \bra{\psi} = \sum_i{c_i^*\bra{u_i}}, \quad\quad c_i^* = \braket{\psi | u_i}.
+    $$
