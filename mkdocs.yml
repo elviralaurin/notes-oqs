@@ -47,6 +47,7 @@ nav:
     - Operators: fundamentals/operators.md
     - Outer product: fundamentals/outer-product.md
     - Change of basis: fundamentals/change-of-basis.md
+    - Measurement: fundamentals/measurement.md
   - Cheatsheet: cheatsheet.md
 
 markdown_extensions:
