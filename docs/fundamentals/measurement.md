@@ -64,7 +64,5 @@ The magnitude of the phase-shifted eigenstate is the same as the original eigens
 
     In other words, you can multiply an eigenstate by any complex number $c = re^{i\theta} \in \mathbb{C}$, and it will still correspond to the same eigenstate.
 
-### Finding eigenvalues
-
 ## References
 <span id="prof-m-eigen">[1]</span> Professor M does Science, Cambridge, U.K. *Eigenvalues and eigenstates in quantum mechanics*. (July 1, 2020). Accessed: Aug. 21, 2024. [Online Video]. Available: [https://youtu.be/p1zg-c1nvwQ?feature=shared](https://youtu.be/p1zg-c1nvwQ?feature=shared).

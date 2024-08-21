@@ -46,7 +46,7 @@ $$
 \braket{\psi | \phi'} = \bra{\psi} \bigl(\hat{A}\ket{\phi}\bigr).
 $$
 
-Since the result of the inner product of two kets in general is a scalar $c \in \mathbb{C}\$, the above must of course also result in a scalar $c \in \mathbb{C}$.
+Since the result of the inner product of two kets in general is a scalar $c \in \mathbb{C}$, the above must of course also result in a scalar $c \in \mathbb{C}$.
 
 The expression $\bra{\psi} \bigl(\hat{A}\ket{\phi}\bigr)$ is by definition equivalent to $\bigl(\bra{\psi}\hat{A}\bigr)\ket{\phi}$ &mdash; i.e. we can interpret it as either the operator $\hat{A}$ acting on the ket $\ket{\psi}$, or as $\hat{A}$ acting on the bra $\bra{\phi}$.
 
@@ -59,8 +59,6 @@ The expression $\bra{\psi} \bigl(\hat{A}\ket{\phi}\bigr)$ is by definition equiv
 
     This structure is called a **matrix element** and is usually written without parentheses, as $\bra{\psi}\hat{A}\ket{\phi}$. Specifically, we would call this example the matrix element of the operator $\hat{A}$ with respect to $\ket{\psi}$ and $\ket{\phi}$.
 
-We know that an operator $\hat{A}$ acts on a ket to produce another ket: $\hat{A}\ket{\psi} = \ket{\psi'}$. However, we don't yet have a corresponding way of talking about how operators act on bras to produce other bras.
-
 !!! info "Adjoint operator"
     Let $\ket{\psi'} = \hat{A}\ket{\psi}$ be a ket in state space $\mathcal{H}$. Then, $\bra{\psi'} = \bra{\psi}\hat{A}^\dagger$ is the corresponding bra in dual space $\mathcal{H}^*$.
     
@@ -72,7 +70,7 @@ We know that an operator $\hat{A}$ acts on a ket to produce another ket: $\hat{A
     \bra{\psi}\hat{A}^\dagger = \bigl(a_1\bra{\psi_1} + a_2\bra{\psi_2}\bigr)\hat{A}^\dagger = a_1\bra{\psi_1}\hat{A}^\dagger + a_2\bra{\psi_2}\hat{A}^\dagger
     $$
 
-    This structure is called the matrix element because in the matrix formulation of quantum mechanics, this is exactly what the elements of an operator expressed as a matrix are.
+## Hermitian operators
 
 !!! info "Observables = Hermitian operators"
     In QM, all operators are observables &mdash; they are measurable properties of physical systems. In order for this to be true, the operators we deal with are all **equal to their own adjoints**:
@@ -82,6 +80,35 @@ We know that an operator $\hat{A}$ acts on a ket to produce another ket: $\hat{A
     $$
 
     An operator that obeys this property is called a **Hermitian operator**.
+
+Observables are represented by Hermitian operators because all Hermitian operators have **real eigenvalues**. Furthermore, Hermitian operators have **orthogonal eigenstates**, which we can normalize, letting us use them to form an **orthonormal basis for the state space**.
+
+??? abstract "Proof: Hermitian operators have real eigenvalues"
+    Let $\hat{A}$ be a Hermitian operator. The eigenvalue equation gives
+
+    $$
+    \begin{align}
+        \hat{A}\ket{\lambda} = \lambda\ket{\lambda} \Leftrightarrow && \tiny{\text{[multiply with $\bra{\lambda}$ from left]}}\\
+        \bra{\lambda}\hat{A}\ket{\lambda} = \lambda\braket{\lambda | \lambda}. && 
+    \end{align}
+    $$
+
+    The corresponding bra to $\lambda\ket{\lambda}$ is $\lambda^*\bra{\lambda}$, and the corresponding bra to $\hat{A}\ket{\lambda}$ is $\bra{\lambda}\hat{A}^\dagger$. The eigenvalue equation $\hat{A}\ket{\lambda} = \lambda\ket{\lambda}$ can thus be written as $\bra{\lambda}\hat{A}^\dagger = \lambda^*\bra{\lambda}$
+    
+    Given that $\hat{A}$ is Hermitian, $\hat{A} = \hat{A}^\dagger$, we get:
+
+    $$
+    \begin{align}
+        \bra{\lambda}\hat{A}\ket{\lambda} = \lambda\braket{\lambda | \lambda} \Leftrightarrow && \\
+        \bra{\lambda}\hat{A}^\dagger\ket{\lambda} = \lambda\braket{\lambda | \lambda} \Leftrightarrow && \\
+        \lambda^*\braket{\lambda | \lambda} = \lambda\braket{\lambda | \lambda} \Leftrightarrow && \tiny{\text{[from eigenvalue eq., bra version]}}\\
+        \lambda^* = \lambda. && \\
+    \end{align}
+    $$
+
+    There is only one way for a complex number $c \in \mathbb{C}$ to be equal to its own complex conjugate: it cannot have an imaginary component, so it is real. QED.
+
+## Unitary operators
 
 !!! info "Unitary operators"
     Another important subset of operators are the **unitary operators**. An operator is unitary if **its inverse is equal to its adjoint**:
