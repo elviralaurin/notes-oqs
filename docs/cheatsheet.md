@@ -133,3 +133,10 @@ Let $\hat{A}$, $\hat{B}$, and $\hat{C}$ be linear operators acting on $\mathcal{
     $$
     \bra{\psi} = \sum_i{c_i^*\bra{u_i}}, \quad\quad c_i^* = \braket{\psi | u_i}.
     $$
+
+!!! info "Writing an operator in a particular orthonormal basis"
+    An operator $\hat{A}$ can be written in the orthonormal basis $\{\ket{u_i}\}$ like so:
+
+    $$
+    \hat{A} = \sum_{ij}{A_{ij}\ket{u_i}\bra{u_j}}, \quad\quad A_{ij} = \bra{u_i}\hat{A}\ket{u_j}.
+    $$

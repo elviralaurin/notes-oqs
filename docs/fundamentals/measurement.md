@@ -37,7 +37,7 @@ When we talk about eigenstates without acknowledging this fact, what we tend to 
 ### Global phase factor
 !!! quote " "
     "Quantum mechanics is independent of a global phase" - *B. Monserrat*[[1]](#prof-m-eigen)
-    
+
 Since we are dealing with complex vector spaces, there is another fact that we have to keep in mind.
 
 Let's say we have an eigenstate $\ket{\lambda}$ that is normalized: $\braket{\lambda | \lambda} = 1$, and we scale it by a factor $\alpha = e^{i\theta}$(1).
@@ -63,6 +63,8 @@ The magnitude of the phase-shifted eigenstate is the same as the original eigens
     - one is phase-shifted from the other: $\ket{\lambda_1} = e^{i\theta}\ket{\lambda_2}$.
 
     In other words, you can multiply an eigenstate by any complex number $c = re^{i\theta} \in \mathbb{C}$, and it will still correspond to the same eigenstate.
+
+### Finding eigenvalues
 
 ## References
 <span id="prof-m-eigen">[1]</span> Professor M does Science, Cambridge, U.K. *Eigenvalues and eigenstates in quantum mechanics*. (July 1, 2020). Accessed: Aug. 21, 2024. [Online Video]. Available: [https://youtu.be/p1zg-c1nvwQ?feature=shared](https://youtu.be/p1zg-c1nvwQ?feature=shared).
