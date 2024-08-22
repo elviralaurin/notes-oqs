@@ -151,7 +151,14 @@ Observables are represented by Hermitian operators because all Hermitian operato
     Since $\lambda \neq \mu$, the only way this can be true is if $\braket{\mu | \lambda} = 0$, which means that $\ket{\lambda}$ and $\ket{\mu}$ are orthogonal. QED.
 
 ## Compatibility of observables
-Two observables
+!!! info "Commutator"
+    We define the **commutator** $[\hat{A}, \hat{B}]$ of two operators $\hat{A}$ and $\hat{B}$ as:
+
+    $$
+    [\hat{A}, \hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}.
+    $$
+
+We say that two observables $\mathcal{A}$ and $\mathcal{B}$ are **compatible** if the corresponding operators $\hat{A}$ and $\hat{B}$ commute.
 
 !!! info "Compatible operators"
     Two operators $\hat{A}$ and $\hat{B}$ are compatible if they commute:
@@ -159,6 +166,15 @@ Two observables
     $$
     \hat{A}\hat{B} = \hat{B}\hat{A}.
     $$
+
+    We can express this in terms of the commutator $[\hat{A}, \hat{B}]$ as:
+
+    $$
+    [\hat{A}, \hat{B}] = 0.
+    $$
+
+If two observables are compatible, it means that they can be measured **simultaneously**.
+
 
 ## Unitary operators
 

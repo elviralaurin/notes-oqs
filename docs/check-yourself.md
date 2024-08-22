@@ -50,3 +50,20 @@
         An observable is a measurable physical property of some system. It is not a mathematical object.
 
         Observables are represented in QM by (Hermitian) operators.
+
+!!! question "Result of the inner product"
+    What can be said about:
+    
+    1. the result of the inner product of two different state vectors $\ket{\psi}$ and $\ket{\phi}$?
+    2. the result of the inner product of a state vector $\ket{\psi}$ with itself?
+    3. the state vector which, if you take the inner product of it with itself, results in 0?
+    4. two different state vectors which, if you take the inner product of them, results in 0?
+
+        ??? success "Answer"
+            1\. The result of the inner product of two different state vectors is a complex number: $\braket{\psi | \phi} = c \in \mathbb{C}$.
+
+            2\. The result of the inner product of a state vector with itself is a real, positive number: $\braket{\psi | \psi} = a \in \mathbb{R}_{\geq 0}$.
+
+            3\. If the result of the inner product of a state vector with itself is 0, then that state vector is the null ket $\ket{\psi}$: $\braket{\psi | \psi} = 0 \Rightarrow \ket{\psi} = \ket{\text{null}}$
+
+            4\. If the result of the inner product of two different state vectors is 0, then the two state vectors are orthogonal: $\braket{\psi | \phi} = 0 \land \ket{\psi} \neq \ket{\phi} \Rightarrow \ket{\psi} \perp \ket{\phi}$.
