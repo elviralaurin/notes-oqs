@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://openquantumsystemsnotes.com/fundamentals/change-of-basis/">
       
       
+        <link rel="prev" href="../outer-product/">
       
-      <link rel="icon" href="/images/favicon.png">
+      
+        <link rel="next" href="../measurement/">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>Notes for Open Quantum Systems</title>
+        <title>Change of basis - Notes for Open Quantum Systems</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +54,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#change-of-basis" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,7 +98,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Notes for Open Quantum Systems" class="md-header__button md-logo" aria-label="Notes for Open Quantum Systems" data-md-component="logo">
+    <a href="../.." title="Notes for Open Quantum Systems" class="md-header__button md-logo" aria-label="Notes for Open Quantum Systems" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64 11 0 21.8-1.4 32-4v228c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 448h56c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-53 0-96-43-96-96V192.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7S50.5 94 68 96.2l7.9 1c48 6 84.1 46.8 84.1 95.3v85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5c-10 3.5-20.8 5.5-32 5.5-28.4 0-54-12.4-71.6-32-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128V10.7C352 4.8 356.7.1 362.6 0h.2c3.3 0 6.4 1.6 8.4 4.2v.1l12.8 17 27.2 36.3L416 64h64l4.8-6.4L512 21.3l12.8-17v-.1c2-2.6 5.1-4.2 8.4-4.2h.2c5.9.1 10.6 4.8 10.6 10.7V128c0 17.3-4.6 33.6-12.6 47.6-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0-32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
@@ -107,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Change of basis
             
           </span>
         </div>
@@ -208,7 +219,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Notes for Open Quantum Systems" class="md-nav__button md-logo" aria-label="Notes for Open Quantum Systems" data-md-component="logo">
+    <a href="../.." title="Notes for Open Quantum Systems" class="md-nav__button md-logo" aria-label="Notes for Open Quantum Systems" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64 11 0 21.8-1.4 32-4v228c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 448h56c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-53 0-96-43-96-96V192.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7S50.5 94 68 96.2l7.9 1c48 6 84.1 46.8 84.1 95.3v85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5c-10 3.5-20.8 5.5-32 5.5-28.4 0-54-12.4-71.6-32-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128V10.7C352 4.8 356.7.1 362.6 0h.2c3.3 0 6.4 1.6 8.4 4.2v.1l12.8 17 27.2 36.3L416 64h64l4.8-6.4L512 21.3l12.8-17v-.1c2-2.6 5.1-4.2 8.4-4.2h.2c5.9.1 10.6 4.8 10.6 10.7V128c0 17.3-4.6 33.6-12.6 47.6-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0-32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
@@ -226,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -242,6 +253,8 @@
       
       
   
+  
+    
   
   
   
@@ -270,29 +283,240 @@
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="/fundamentals/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Fundamentals
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../state-vectors-hilbert-space/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    State vectors and Hilbert space
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inner-product/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inner product
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dual-space/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dual space
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outer-product/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outer product
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Change of basis
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Change of basis
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../measurement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -305,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cheatsheet/" class="md-nav__link">
+      <a href="../../cheatsheet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -325,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/check-yourself/" class="md-nav__link">
+      <a href="../../check-yourself/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -355,6 +579,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -366,8 +609,93 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="change-of-basis">Change of basis</h1>
+<p>A state vector <span class="arithmatex">\(\ket{\psi}\)</span> can be written in terms of a set of basis vectors <span class="arithmatex">\(\{\ket{u_i}\}\)</span>, which spans <span class="arithmatex">\(\mathcal{H}\)</span>.</p>
+<p>In the vast majority of cases, we'll be dealing with orthonormal bases:</p>
+<div class="admonition info">
+<p class="admonition-title">Orthonormal basis</p>
+<p>A set of vectors <span class="arithmatex">\(\{\ket{u_i}\}\)</span> is an <strong>orthonormal basis</strong> to <span class="arithmatex">\(\mathcal{H}\)</span> if the vectors are mutually orthogonal (<span class="arithmatex">\(\braket{u_i | u_j} = 0, i \neq j\)</span>) and all are normalized (<span class="arithmatex">\(\braket{u_i | u_i} = 1\)</span>).</p>
+<p class="annotate">We can summarize the properties of an orthonormal basis using the <strong>Kroenecker delta</strong> <span class="arithmatex">\(\delta_{ij}\)</span>, which is defined as(1):</p>
+<ol>
+<li>I like to think about it as "equals" for the indices <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>, returning 1 for "true" and 0 for "false": <code>i == j ? 1 : 0</code></li>
+</ol>
+<div class="arithmatex">\[
+\delta_{ij} =
+\begin{cases}
+    1, i = j,\\
+    0, i \neq j.
+\end{cases}
+\]</div>
+<p>Thus, a basis <span class="arithmatex">\(\{\ket{u_i}\}\)</span> is orthonormal if <span class="arithmatex">\(\braket{u_i | u_j} = \delta_{ij}\)</span>.</p>
+</div>
+<p>Every ket <span class="arithmatex">\(\ket{\psi} \in \mathcal{H}\)</span> has a <strong>unique</strong> expansion of the basis vectors:</p>
+<div class="arithmatex">\[
+\ket{\psi} = \sum_i{c_i \ket{u_i}},
+\]</div>
+<p>where <span class="arithmatex">\(c_i\)</span> is the expansion coefficient for the <span class="arithmatex">\(i\)</span>th basis vector <span class="arithmatex">\(\ket{u_i}\)</span>. This means that if the basis is known, we only need the set of expansion coefficients <span class="arithmatex">\(c_i\)</span> to uniquely identify a state vector.</p>
+<div class="admonition info">
+<p class="admonition-title">Determining the expansion coefficients</p>
+<p>Given a basis <span class="arithmatex">\(\{\ket{u_i}\}\)</span> spanning <span class="arithmatex">\(\mathcal{H}\)</span>, we can find the expansion coefficients of a state <span class="arithmatex">\(\ket{\psi} \in \mathcal{H}\)</span> as follows:</p>
+<div class="arithmatex">\[
+\begin{align}
+    \braket{u_j | \psi} =\\
+    \bra{u_j} \Bigl(\sum_i{c_i \ket{u_i}}\Bigr) =\\
+    \sum_i{c_i \braket{u_j | u_i}} =\\
+    \sum_i{c_i \delta_{ij}} =\\
+    c_i.
+\end{align}
+\]</div>
+<p>Note that in the second to last step, <span class="arithmatex">\(\delta_{ij} = 0\)</span> for every single term for which <span class="arithmatex">\(i \neq j\)</span>. This leaves only one term in the sum: the one where <span class="arithmatex">\(i = j\)</span>, which makes <span class="arithmatex">\(\delta_{ij} = 1\)</span>, which results in <span class="arithmatex">\(c_i\delta_{ij} = c_i \cdot 1 = c_i\)</span>.</p>
+</div>
+<p>Say we have the ket <span class="arithmatex">\(\ket{\psi}\)</span>. We can write it in the orthonormal basis <span class="arithmatex">\(\{\ket{u_i}\}\)</span> like so:</p>
+<div class="arithmatex">\[
+\ket{\psi} = \sum_i{c_i\ket{u_i}}, \quad\quad c_i = \braket{u_i | \psi}.
+\]</div>
+<p>We now know how to represent a given ket in a specific basis. How about the bras?</p>
+<p>Say we have a ket <span class="arithmatex">\(\ket{\psi} = \sum_i{c_i\ket{u_i}} \in \mathcal{H}\)</span>, with expansion coefficients <span class="arithmatex">\(c_i = \braket{u_i | \psi}\)</span>. The corresponding a bra <span class="arithmatex">\(\bra{\psi} \in \mathcal{H}^*\)</span> can then be written:</p>
+<div class="arithmatex">\[
+\begin{align}
+    \bra{\psi} &amp;=\\
+    \bra{\psi}\mathbb{I} &amp;=\\
+    \bra{\psi} \sum_i{\Bigl(\ket{u_i}\bra{u_i}\Bigr)} &amp;=\\
+    \sum_i{\Bigl(\braket{\psi | u_i}\bra{u_i}\Bigr)} &amp;=\\
+    \sum_i{\Bigl(\braket{u_i | \psi}^*\bra{u_i}\Bigr)} &amp;=\\
+    \sum_i{\Bigl(c_i^*\bra{u_i}\Bigr)}.
+\end{align}
+\]</div>
+<p>Finally, we want to be able to express operators in terms of a specific basis.</p>
+<div class="admonition info">
+<p class="admonition-title">Writing an operator in a particular orthonormal basis</p>
+<p class="annotate">We can write an operator <span class="arithmatex">\(\hat{A}\ket{\psi} = \ket{\psi'}\)</span> in a particular orthonormal basis <span class="arithmatex">\(\{\ket{u_i}\}\)</span> like so(1):</p>
+<ol>
+<li>See <a href="#prof-m-matrix">[1]</a> for proof.</li>
+</ol>
+<div class="arithmatex">\[
+\hat{A} = \sum_{ij}{\ket{u_i}\bra{u_i}\hat{A}\ket{u_j}\bra{u_j}},
+\]</div>
+<p>which, if we let <span class="arithmatex">\(A_{ij}\)</span> be the matrix element <span class="arithmatex">\(\bra{u_i}\hat{A}\ket{u_j}\)</span>, becomes:</p>
+<div class="arithmatex">\[
+\hat{A} = \sum_{ij}{A_{ij}\ket{u_i}\bra{u_j}}.
+\]</div>
+</div>
+<h2 id="references">References</h2>
+<p><span id="prof-m-matrix">[1]</span> Professor M does Science, Cambridge, U.K. <em>Matrix formulation of quantum mechanics</em>. (June 24, 2020). Accessed: Aug. 20, 2024. [Online Video]. Available: <a href="https://youtu.be/wIwnb1ldYTI">https://youtu.be/wIwnb1ldYTI</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -385,6 +713,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../outer-product/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Outer product">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Outer product
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../measurement/" class="md-footer__link md-footer__link--next" aria-label="Next: Measurement">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Measurement
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -411,12 +777,12 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["toc.follow", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.prune", "navigation.top"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.prune", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
-        <script src="/javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
