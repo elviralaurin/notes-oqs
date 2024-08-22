@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://openquantumsystemsnotes.com/fundamentals/dual-space/">
       
       
+        <link rel="prev" href="../inner-product/">
       
-      <link rel="icon" href="/images/favicon.png">
+      
+        <link rel="next" href="../operators/">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>Notes for Open Quantum Systems</title>
+        <title>Dual space - Notes for Open Quantum Systems</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +54,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#dual-space" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,7 +98,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Notes for Open Quantum Systems" class="md-header__button md-logo" aria-label="Notes for Open Quantum Systems" data-md-component="logo">
+    <a href="../.." title="Notes for Open Quantum Systems" class="md-header__button md-logo" aria-label="Notes for Open Quantum Systems" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64 11 0 21.8-1.4 32-4v228c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 448h56c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-53 0-96-43-96-96V192.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7S50.5 94 68 96.2l7.9 1c48 6 84.1 46.8 84.1 95.3v85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5c-10 3.5-20.8 5.5-32 5.5-28.4 0-54-12.4-71.6-32-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128V10.7C352 4.8 356.7.1 362.6 0h.2c3.3 0 6.4 1.6 8.4 4.2v.1l12.8 17 27.2 36.3L416 64h64l4.8-6.4L512 21.3l12.8-17v-.1c2-2.6 5.1-4.2 8.4-4.2h.2c5.9.1 10.6 4.8 10.6 10.7V128c0 17.3-4.6 33.6-12.6 47.6-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0-32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
@@ -107,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Dual space
             
           </span>
         </div>
@@ -208,7 +219,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Notes for Open Quantum Systems" class="md-nav__button md-logo" aria-label="Notes for Open Quantum Systems" data-md-component="logo">
+    <a href="../.." title="Notes for Open Quantum Systems" class="md-nav__button md-logo" aria-label="Notes for Open Quantum Systems" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64 11 0 21.8-1.4 32-4v228c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 448h56c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-53 0-96-43-96-96V192.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7S50.5 94 68 96.2l7.9 1c48 6 84.1 46.8 84.1 95.3v85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5c-10 3.5-20.8 5.5-32 5.5-28.4 0-54-12.4-71.6-32-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128V10.7C352 4.8 356.7.1 362.6 0h.2c3.3 0 6.4 1.6 8.4 4.2v.1l12.8 17 27.2 36.3L416 64h64l4.8-6.4L512 21.3l12.8-17v-.1c2-2.6 5.1-4.2 8.4-4.2h.2c5.9.1 10.6 4.8 10.6 10.7V128c0 17.3-4.6 33.6-12.6 47.6-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0-32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
@@ -226,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -242,6 +253,8 @@
       
       
   
+  
+    
   
   
   
@@ -270,29 +283,240 @@
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="/fundamentals/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Fundamentals
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../state-vectors-hilbert-space/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    State vectors and Hilbert space
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inner-product/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inner product
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Dual space
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Dual space
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outer-product/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outer product
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../change-of-basis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change of basis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../measurement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -305,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cheatsheet/" class="md-nav__link">
+      <a href="../../cheatsheet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -325,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/check-yourself/" class="md-nav__link">
+      <a href="../../check-yourself/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -355,6 +579,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -366,8 +609,66 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="dual-space">Dual space</h1>
+<div class="admonition quote">
+<p class="admonition-title"> </p>
+<p>"To every ket, there corresponds a bra" &mdash; <em>B. Monserrat</em><a href="#prof-m-dirac">[1]</a></p>
+</div>
+<p class="annotate">Just like the kets live in state space <span class="arithmatex">\(\mathcal{H}\)</span>, the bras live in a space we denote <span class="arithmatex">\(\mathcal{H}^*\)</span>. This space is commonly called the <em>dual space</em>(1).</p>
+<ol>
+<li>It's actually a bit misleading to call it <em>the</em> dual space, as all vector spaces has a dual space. When we talk about dual spaces in QM, at least in these notes, what we mean is really just the space of all bras, i.e. the <em>linear functionals</em> to the kets. Search for the "Riesz representation theorem" for more information.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The dual space <span class="arithmatex">\(\mathcal{H}^*\)</span> is also a Hilbert space!</p>
+</div>
+<p>Recall that in Euclidean space, the dot product of two vectors <span class="arithmatex">\(\bar{u}\)</span> and <span class="arithmatex">\(\bar{v}\)</span> can be thought of as multiplying the corresponding components and adding up the result:</p>
+<div class="arithmatex">\[
+\bar{u} \cdot \bar{v} = [u_1, u_2, \dots, u_n] \cdot [v_1, v_2, \dots, v_n] = \sum_{i=1}^n{u_iv_i}.
+\]</div>
+<p>However, we can also think about it as a matrix multiplication where the first factor is a row vector and the second a column vector:</p>
+<div class="arithmatex">\[
+\bar{u} \cdot \bar{v} =
+\begin{bmatrix}
+    u_1 &amp; u_2 &amp; \dots &amp; u_n
+\end{bmatrix}
+\begin{bmatrix}
+    v_1\\
+    v_2\\
+    \vdots\\
+    v_n
+\end{bmatrix} = \sum_{i=1}^n{u_iv_i}.
+\]</div>
+<p>If vectors are thought of as column vectors by default, we can say that we "flipped" the first vector to turn it into a row vector in order to calculate the dot product. Mathematically, this "flipping" of column vectors to row vectors is done by taking the <em>transpose</em> of the vector. In other words, a column vector <span class="arithmatex">\(\bar{v}\)</span> has a corresponding row vector which is found by taking the transpose of the original vector: <span class="arithmatex">\(\bar{v}^T\)</span>.</p>
+<p>The relationship between row and column vectors is similar to that of bras and kets, with one additional difference:</p>
+<div class="admonition info">
+<p class="admonition-title">Column vs. row vector, ket vs. bra</p>
+<p>Let <span class="arithmatex">\(a_r \in \mathbb{R}\)</span> and <span class="arithmatex">\(a_c \in \mathbb{C}\)</span> be scalars.</p>
+<p>In Euclidean space, given a column vector <span class="arithmatex">\(a_r\bar{v} \in \mathbb{R}^n\)</span>, the corresponding row vector is given by <span class="arithmatex">\(a_r\bar{v}^T \in \mathbb{R}^{1 \times n}\)</span>. When going from column vector to row vector, we leave the scalar unchanged.</p>
+<p>In state space, given a ket <span class="arithmatex">\(a_c\ket{\psi} \in \mathcal{H}\)</span>, the corresponding bra is given by <span class="arithmatex">\(a_c^*\bra{\psi} \in \mathcal{H}^*\)</span>. When going from ket to bra, we have to take the <strong>complex conjugate</strong> of the scalar: <span class="arithmatex">\(a_c\)</span> becomes <span class="arithmatex">\(a_c^*\)</span>.</p>
+</div>
+<p class="annotate">The reason why we have to take the complex conjugate of any scalars when finding the corresponding bra to a ket comes from the definition of the inner product(1).</p>
+<ol>
+<li>For more information on why this is, check out <a href="https://www.youtube.com/watch?v=hJoWM9jf0gU">Professor M does Science's video on YouTube</a> from timestamp 10:05 onwards.</li>
+</ol>
+<h2 id="references">References</h2>
+<p><span id="prof-m-dirac">[1]</span> Professor M does Science, Cambridge, U.K. <em>Dirac Notation: State Space And Dual Space</em>. (May 23, 2020). Accessed: Jul. 3, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=hJoWM9jf0gU">https://www.youtube.com/watch?v=hJoWM9jf0gU</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -385,6 +686,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../inner-product/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Inner product">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Inner product
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../operators/" class="md-footer__link md-footer__link--next" aria-label="Next: Operators">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Operators
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -411,12 +750,12 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["toc.follow", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.prune", "navigation.top"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.prune", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
-        <script src="/javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

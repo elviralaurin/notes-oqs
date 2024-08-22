@@ -2,17 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://openquantumsystemsnotes.com/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://openquantumsystemsnotes.com/abstract-vector-spaces/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://openquantumsystemsnotes.com/quantum-state-space/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <loc>https://openquantumsystemsnotes.com/cheatsheet/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/check-yourself/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/fundamentals/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/fundamentals/change-of-basis/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/fundamentals/dual-space/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/fundamentals/inner-product/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/fundamentals/measurement/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/fundamentals/operators/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/fundamentals/outer-product/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/fundamentals/state-vectors-hilbert-space/</loc>
+         <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
