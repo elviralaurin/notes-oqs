@@ -101,12 +101,64 @@ Observables are represented by Hermitian operators because all Hermitian operato
     \begin{align}
         \bra{\lambda}\hat{A}\ket{\lambda} = \lambda\braket{\lambda | \lambda} \Leftrightarrow && \\
         \bra{\lambda}\hat{A}^\dagger\ket{\lambda} = \lambda\braket{\lambda | \lambda} \Leftrightarrow && \\
-        \lambda^*\braket{\lambda | \lambda} = \lambda\braket{\lambda | \lambda} \Leftrightarrow && \tiny{\text{[from eigenvalue eq., bra version]}}\\
-        \lambda^* = \lambda. && \\
+        \lambda^*\braket{\lambda | \lambda} = \lambda\braket{\lambda | \lambda} \Rightarrow && \tiny{\text{[from eigenvalue eq., bra version]}}\\
+        \lambda^* = \lambda. && \tiny{\text{[assuming $\ket{\lambda} \neq \ket{\text{null}}$]}}\\
     \end{align}
     $$
 
     There is only one way for a complex number $c \in \mathbb{C}$ to be equal to its own complex conjugate: it cannot have an imaginary component, so it is real. QED.
+
+??? abstract "Proof: Hermitian operators have eigenstates that form an orthonormal basis for $\mathcal{H}$"
+    Say we have an operator $\hat{A}$ with two different eigenvalues $\lambda$ and $\mu$ and their associated eigenvectors $\ket{\lambda}$ and $\ket{\mu}$ like so:
+
+    $$
+    \begin{align}
+        \hat{A}\ket{\lambda} = \lambda\ket{\lambda},\tag{1}\\
+        \hat{A}\ket{\mu} = \mu\ket{\mu}\tag{2}.
+    \end{align}
+    $$
+
+    We modify equation (1) to get:
+
+    $$
+    \begin{align}
+        \hat{A}\ket{\lambda} = \lambda\ket{\lambda} \Leftrightarrow && \tiny{\text{multiply with $\bra{\mu}$ from left}}\\
+        \bra{\mu}\hat{A}\ket{\lambda} = \lambda\braket{\mu | \lambda}. &&
+    \end{align}
+    $$
+
+    We now modify equation (2) to get:
+
+    $$
+    \begin{align}
+        \hat{A}\ket{\mu} = \mu\ket{\mu} \Leftrightarrow && \tiny{\text{rewrite to dual space}}\\
+        \bra{\mu}\hat{A}^\dagger = \mu^*\bra{\mu} \Leftrightarrow && \tiny{\text{$\hat{A}$ is Hermitian and $\mu$ is real}}\\
+        \bra{\mu}\hat{A} = \mu\bra{\mu} \Leftrightarrow && \tiny{\text{multiply with $\ket{\lambda}$ from right}}\\
+        \bra{\mu}\hat{A}\ket{\lambda} = \mu\braket{\mu | \lambda}. &&
+    \end{align}
+    $$
+
+    Since the left-hand sides of both equations are equal, we can equate the right-hand sides to get:
+
+    $$
+    \begin{align}
+        \lambda\braket{\mu | \lambda} = \mu\braket{\mu | \lambda} \Leftrightarrow && \\
+        \lambda\braket{\mu | \lambda} - \mu\braket{\mu | \lambda} = 0 \Leftrightarrow && \\
+        \braket{\mu | \lambda}(\lambda - \mu) = 0.
+    \end{align}
+    $$
+
+    Since $\lambda \neq \mu$, the only way this can be true is if $\braket{\mu | \lambda} = 0$, which means that $\ket{\lambda}$ and $\ket{\mu}$ are orthogonal. QED.
+
+## Compatibility of observables
+Two observables
+
+!!! info "Compatible operators"
+    Two operators $\hat{A}$ and $\hat{B}$ are compatible if they commute:
+
+    $$
+    \hat{A}\hat{B} = \hat{B}\hat{A}.
+    $$
 
 ## Unitary operators
 

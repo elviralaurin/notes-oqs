@@ -49,7 +49,7 @@ nav:
     - Change of basis: fundamentals/change-of-basis.md
     - Measurement: fundamentals/measurement.md
   - Cheatsheet: cheatsheet.md
-  - Exercises: exercises.md
+  - Check yourself: check-yourself.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
