@@ -7,7 +7,7 @@ This is quite a bold statement. All physical laws we are aware of in the world o
 
 When we say that it is impossible to predict the outcome of a quantum measurement, it implies that some things don't have a clear cause and effect. Note that we aren't saying that we just simply don't know how to predict the outcome, we are making the stronger claim of it physically not being possible.
 
-Here, we will try to make some sense of this seemingly insane claim.
+I don't know about you, but to me, this claim sounds absolutely insane. Hopefully, we'll be able to shed some light on why this is the best conclusion.
 
 !!! quote " "
     "Richard Feynman, one of the big figures in physics, used to say 'No one understands quantum mechanics.' So in some sense, the pressure is off for you guys, because I don't get it and you don't get it and Feynman doesn't get it. The point is, here is my goal: right now, I am the only one who doesn't understand quantum mechanics. In about seven days, all of you will be unable to understand quantum mechanics." &mdash; *R. Shankar*[[1]](#shankar-l1)
@@ -27,7 +27,7 @@ Say you have a quantum system of some kind, and you want to measure one of its p
     The set of eigenvalues $\{\lambda_i\}$ is called the **spectrum** of $\hat{A}$.
 
 
-### Normalizing the eigenstate
+### Eigenstates are only defined up to a constant
 Let's say we have an operator $\hat{A}$ with eigenvalue equation $\hat{A}\ket{\lambda} = \lambda\ket{\lambda}$. Now, let's see what happens if we scale the eigenstate with a factor $\alpha \in \mathbb{C}$:
 
 $$
@@ -41,7 +41,7 @@ $$
 \end{align}
 $$
 
-This is just the same eigenvalue equation for the operator $\hat{A}$ again, with the same eigenvalue $\lambda$. In other words, if you find an eigenstate $\ket{\lambda}$, any multiple $\alpha\ket{\lambda}$ of the eigenstate will also be an eigenstate. This demonstrates that **eigenstates are only really defined up to a constant** &mdash; they only really tell us about a direction in $\mathcal{H}$, and any state vector in that direction will also be an eigenstate.
+This is just the same eigenvalue equation for the operator $\hat{A}$ again, with the same eigenvalue $\lambda$. In other words, if you find an eigenstate $\ket{\lambda}$, any multiple $\alpha\ket{\lambda}$ of the eigenstate will also be an eigenstate. This demonstrates that **eigenstates are only defined up to a constant** &mdash; they only really tell us about a direction in $\mathcal{H}$, and any state vector in that direction will also be an eigenstate.
 
 When we talk about eigenstates without acknowledging this fact, what we tend to mean is the **normalized eigenstate**. The corresponding eigenvalue will then be the factor $\alpha$ that makes $\braket{\lambda | \lambda} = 1$.
 
@@ -75,7 +75,53 @@ The magnitude of the phase-shifted eigenstate is the same as the original eigens
 
     In other words, you can multiply an eigenstate by any complex number $c = re^{i\theta} \in \mathbb{C}$, and it will still correspond to the same eigenstate.
 
+## What happens when we measure a quantum system?
+As stated before, one of the postulates of quantum mechanics is that the result of a measurement of a physical quantity is one of the eigenvalues of the associated observable. This is what the word "quantum" alludes to &mdash; the result of a measurement can only be one of a discrete set of outputs.
+
+So we know that if we measure a physical quantity $\mathcal{A}$, it will result in one of the eigenvalues $\lambda_n$ of the corresponding operator $\hat{A}$. But how do we know which $\lambda_n$ we'll get?
+
+!!! info "The Born rule"
+    The measurement of $\mathcal{A}$ in a system in normalized state $\ket{\psi}$ gives eigenvalue $\lambda_n$ with probability:
+
+    $$
+    P(\lambda_n) = |\braket{\lambda_n | \psi}|^2,
+    $$
+
+    where $\ket{\lambda_n}$ is the eigenstate corresponding to eigenvalue $\lambda_n$[[3]](#prof-m-measure).
+
+    This property is called the **Born rule** and is another one of the postulates of quantum mechanics. It's gotten its name from the German physicist Max Born, who formulated it in 1926[[4]](#born-rule).
+
+??? aside "Reflections on the Born rule"
+    The Born rule is *the* thing which introduces the probabilistic nature of quantum mechanics. And it has been demonstrated experimentally time and time again, but the obvious question to me is, how do we know that this isn't just an approximation of some deterministic rule or set of rules?
+    
+    After all, I can very well write a probabilistic model of the outcome of a dice roll and say that "each possible outcome of the roll of a 6-sided die has a 1 in 6 probability". And that model would be correct, and be possible to verify through experimentation. But it wouldn't tell the whole story.
+    
+    If I knew everything there was to know about the die: its weight, weight distribution, the exact way in which it was rolled, including its rotation speed and so on, I could use the classical laws of physics to create a deterministic model which could accurately predict the *exact* result of the roll, provided I had access to all the information. So how can we be so sure that the situation isn't the same in quantum mechanics?
+
+So far, perhaps forever, the Born rule is the best we've got when it comes to the prediction of quantum measurements.
+
+So if an isolated quantum system is in a state $\ket{\psi}$, the measurement of a physical property $\mathcal{A}$ of the system will result in one of the eigenvalues $\lambda_n$ of $\hat{A}$, where $\hat{A}$ is the corresponding Hermitian operator to $\mathcal{A}$. Once the system has been measured, its state will instantaneously become the eigenstate $\lambda_n$ to the corresponding eigenvalue $\lambda_n$.
+
+Since we can write a state $\ket{\psi}$ in terms of some basis to $\mathcal{H}$, and we know that the eigenstates of an operator $\hat{A}$ form such a basis, we can write $\ket{\psi}$ like so:
+
+$$
+\ket{\psi} = \sum_n{c_n\ket{\lambda_n}}, \quad\quad c_n = \braket{\lambda_n | \psi}.
+$$
+
+The Born rule then gives us:
+
+$$
+\begin{align}
+    P(\lambda_n) = |\braket{\lambda_n | \psi}|^2 \Leftrightarrow\\
+    P(\lambda_n) = |c_n|^2.
+\end{align}
+$$
+
 ## References
 <span id="shankar-l1">[1]</span> YaleCourses, Yale Univ. Press, New Haven, CT, USA. *19. Quantum Mechanics I: The key experiments and wave-particle duality*. (March 24, 2011). Accessed: Aug. 22, 2024. [Online Video]. Available: [https://youtu.be/uK2eFv7ne_Q?feature=shared](https://youtu.be/uK2eFv7ne_Q?feature=shared).
 
 <span id="prof-m-eigen">[2]</span> Professor M does Science, Cambridge, U.K. *Eigenvalues and eigenstates in quantum mechanics*. (July 1, 2020). Accessed: Aug. 21, 2024. [Online Video]. Available: [https://youtu.be/p1zg-c1nvwQ?feature=shared](https://youtu.be/p1zg-c1nvwQ?feature=shared).
+
+<span id="prof-m-measure">[3]</span> Professor M does Science, Cambridge, U.K. *Measurements in quantum mechanics || Concepts*. (Nov. 11, 2020). Accessed: Aug. 23, 2024. [Online Video]. Available: [https://youtu.be/u1R3kRWh1ek?feature=shared](https://youtu.be/u1R3kRWh1ek?feature=shared).
+
+<span id="born-rule">[4]</span> N. P. Landsman, "Born Rule and its Interpretation," in *Compendium of Quantum Physics*, D. Greenberger, K. Hentschel, F. Weinert, Ed., Berlin, Germany: Springer-Verlag, 2009, pp. 64-70.

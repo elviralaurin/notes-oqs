@@ -41,16 +41,6 @@
 
         To ensure these properties, we represent physical observables with Hermitian operators.
 
-!!! question "Observable vs. operator"
-    What is the difference between an observable and an operator?
-
-    ??? success "Answer"
-        An operator is a mathematical object which maps a set of states onto another set of states.
-
-        An observable is a measurable physical property of some system. It is not a mathematical object.
-
-        Observables are represented in QM by (Hermitian) operators.
-
 !!! question "Result of the inner product"
     What can be said about:
     
@@ -67,3 +57,23 @@
             3\. If the result of the inner product of a state vector with itself is 0, then that state vector is the null ket $\ket{\psi}$: $\braket{\psi | \psi} = 0 \Rightarrow \ket{\psi} = \ket{\text{null}}$
 
             4\. If the result of the inner product of two different state vectors is 0, then the two state vectors are orthogonal: $\braket{\psi | \phi} = 0 \land \ket{\psi} \neq \ket{\phi} \Rightarrow \ket{\psi} \perp \ket{\phi}$.
+
+!!! question "Measuring a quantum system that is in an eigenstate"
+    Say you want to measure some property with corresponding operator $\hat{A}$ of a system that is in state $\ket{\psi} = \ket{\lambda_0}$, where $\ket{\lambda_0}$ is one of the eigenstates of $\hat{A}$. What are the possible outcomes of this measurement? Assume normalized eigenstates.
+
+    ??? success "Answer"
+        The Born rule gives us:
+
+        $$
+        P(\lambda_n) = |\braket{\lambda_n | \psi}|^2,
+        $$
+
+        where $\ket{\psi}$ is the current state of the system. So if $\ket{\psi} = \ket{\lambda_0}$, we get:
+
+        $$
+        P(\lambda_0) = |\braket{\lambda_0 | \lambda_0}|^2 = |1|^2 = 1,
+        $$
+
+        since the eigenvectors are normalized.
+
+        Since the probabilities of the total set of possible outcomes must sum to 1, this means that all other eigenstates have a zero probability.
