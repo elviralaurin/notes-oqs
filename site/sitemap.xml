@@ -26,12 +26,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://openquantumsystemsnotes.com/fundamentals/change-of-basis/</loc>
+         <loc>https://openquantumsystemsnotes.com/fundamentals/bases-representation/</loc>
          <lastmod>2024-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://openquantumsystemsnotes.com/fundamentals/dual-space/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/fundamentals/eigenvalues-eigenstates/</loc>
          <lastmod>2024-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -57,6 +62,11 @@
     </url>
     <url>
          <loc>https://openquantumsystemsnotes.com/fundamentals/state-vectors-hilbert-space/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://openquantumsystemsnotes.com/oqs/</loc>
          <lastmod>2024-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>

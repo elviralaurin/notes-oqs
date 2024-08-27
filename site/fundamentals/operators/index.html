@@ -279,6 +279,8 @@
       
         
       
+        
+      
     
     
     
@@ -470,6 +472,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -507,11 +518,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../change-of-basis/" class="md-nav__link">
+      <a href="../bases-representation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Change of basis
+    Bases and representation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eigenvalues-eigenstates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eigenvalues and eigenstates
   </span>
   
 
@@ -544,6 +576,50 @@
             
           </ul>
         </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../oqs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Open Quantum Systems
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
       
     </li>
   
@@ -651,6 +727,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -728,6 +813,10 @@
 <div class="arithmatex">\[
 \bra{\psi}\hat{A}^\dagger = \bigl(a_1\bra{\psi_1} + a_2\bra{\psi_2}\bigr)\hat{A}^\dagger = a_1\bra{\psi_1}\hat{A}^\dagger + a_2\bra{\psi_2}\hat{A}^\dagger
 \]</div>
+<p>Finally, the adjoint works on the product of two operators as follows:</p>
+<div class="arithmatex">\[
+(\hat{A}\hat{B})^\dagger = \hat{B}^\dagger\hat{A}^\dagger.
+\]</div>
 </div>
 <h2 id="hermitian-operators">Hermitian operators</h2>
 <div class="admonition info">
@@ -738,63 +827,6 @@
 \]</div>
 <p>An operator that obeys this property is called a <strong>Hermitian operator</strong>.</p>
 </div>
-<p>Observables are represented by Hermitian operators because all Hermitian operators have <strong>real eigenvalues</strong>. Furthermore, Hermitian operators have <strong>orthogonal eigenstates</strong>, which we can normalize, letting us use them to form an <strong>orthonormal basis for the state space</strong>.</p>
-<details class="abstract">
-<summary>Proof: Hermitian operators have real eigenvalues</summary>
-<p>Let <span class="arithmatex">\(\hat{A}\)</span> be a Hermitian operator. The eigenvalue equation gives</p>
-<div class="arithmatex">\[
-\begin{align}
-    \hat{A}\ket{\lambda} = \lambda\ket{\lambda} \Leftrightarrow &amp;&amp; \tiny{\text{[multiply with $\bra{\lambda}$ from left]}}\\
-    \bra{\lambda}\hat{A}\ket{\lambda} = \lambda\braket{\lambda | \lambda}. &amp;&amp; 
-\end{align}
-\]</div>
-<p>The corresponding bra to <span class="arithmatex">\(\lambda\ket{\lambda}\)</span> is <span class="arithmatex">\(\lambda^*\bra{\lambda}\)</span>, and the corresponding bra to <span class="arithmatex">\(\hat{A}\ket{\lambda}\)</span> is <span class="arithmatex">\(\bra{\lambda}\hat{A}^\dagger\)</span>. The eigenvalue equation <span class="arithmatex">\(\hat{A}\ket{\lambda} = \lambda\ket{\lambda}\)</span> can thus be written as <span class="arithmatex">\(\bra{\lambda}\hat{A}^\dagger = \lambda^*\bra{\lambda}\)</span></p>
-<p>Given that <span class="arithmatex">\(\hat{A}\)</span> is Hermitian, <span class="arithmatex">\(\hat{A} = \hat{A}^\dagger\)</span>, we get:</p>
-<div class="arithmatex">\[
-\begin{align}
-    \bra{\lambda}\hat{A}\ket{\lambda} = \lambda\braket{\lambda | \lambda} \Leftrightarrow &amp;&amp; \\
-    \bra{\lambda}\hat{A}^\dagger\ket{\lambda} = \lambda\braket{\lambda | \lambda} \Leftrightarrow &amp;&amp; \\
-    \lambda^*\braket{\lambda | \lambda} = \lambda\braket{\lambda | \lambda} \Rightarrow &amp;&amp; \tiny{\text{[from eigenvalue eq., bra version]}}\\
-    \lambda^* = \lambda. &amp;&amp; \tiny{\text{[assuming $\ket{\lambda} \neq \ket{\text{null}}$]}}\\
-\end{align}
-\]</div>
-<p>There is only one way for a complex number <span class="arithmatex">\(c \in \mathbb{C}\)</span> to be equal to its own complex conjugate: it cannot have an imaginary component, so it is real. QED.</p>
-</details>
-<details class="abstract">
-<summary>Proof: Hermitian operators have eigenstates that form an orthonormal basis for <span class="arithmatex">\(\mathcal{H}\)</span></summary>
-<p>Say we have an operator <span class="arithmatex">\(\hat{A}\)</span> with two different eigenvalues <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(\mu\)</span> and their associated eigenvectors <span class="arithmatex">\(\ket{\lambda}\)</span> and <span class="arithmatex">\(\ket{\mu}\)</span> like so:</p>
-<div class="arithmatex">\[
-\begin{align}
-    \hat{A}\ket{\lambda} = \lambda\ket{\lambda},\tag{1}\\
-    \hat{A}\ket{\mu} = \mu\ket{\mu}\tag{2}.
-\end{align}
-\]</div>
-<p>We modify equation (1) to get:</p>
-<div class="arithmatex">\[
-\begin{align}
-    \hat{A}\ket{\lambda} = \lambda\ket{\lambda} \Leftrightarrow &amp;&amp; \tiny{\text{multiply with $\bra{\mu}$ from left}}\\
-    \bra{\mu}\hat{A}\ket{\lambda} = \lambda\braket{\mu | \lambda}. &amp;&amp;
-\end{align}
-\]</div>
-<p>We now modify equation (2) to get:</p>
-<div class="arithmatex">\[
-\begin{align}
-    \hat{A}\ket{\mu} = \mu\ket{\mu} \Leftrightarrow &amp;&amp; \tiny{\text{rewrite to dual space}}\\
-    \bra{\mu}\hat{A}^\dagger = \mu^*\bra{\mu} \Leftrightarrow &amp;&amp; \tiny{\text{$\hat{A}$ is Hermitian and $\mu$ is real}}\\
-    \bra{\mu}\hat{A} = \mu\bra{\mu} \Leftrightarrow &amp;&amp; \tiny{\text{multiply with $\ket{\lambda}$ from right}}\\
-    \bra{\mu}\hat{A}\ket{\lambda} = \mu\braket{\mu | \lambda}. &amp;&amp;
-\end{align}
-\]</div>
-<p>Since the left-hand sides of both equations are equal, we can equate the right-hand sides to get:</p>
-<div class="arithmatex">\[
-\begin{align}
-    \lambda\braket{\mu | \lambda} = \mu\braket{\mu | \lambda} \Leftrightarrow &amp;&amp; \\
-    \lambda\braket{\mu | \lambda} - \mu\braket{\mu | \lambda} = 0 \Leftrightarrow &amp;&amp; \\
-    \braket{\mu | \lambda}(\lambda - \mu) = 0.
-\end{align}
-\]</div>
-<p>Since <span class="arithmatex">\(\lambda \neq \mu\)</span>, the only way this can be true is if <span class="arithmatex">\(\braket{\mu | \lambda} = 0\)</span>, which means that <span class="arithmatex">\(\ket{\lambda}\)</span> and <span class="arithmatex">\(\ket{\mu}\)</span> are orthogonal. QED.</p>
-</details>
 <h2 id="compatibility-of-observables">Compatibility of observables</h2>
 <div class="admonition info">
 <p class="admonition-title">Commutator</p>
@@ -815,15 +847,24 @@
 [\hat{A}, \hat{B}] = 0.
 \]</div>
 </div>
-<p>If two observables are compatible, it means that they can be measured <strong>simultaneously</strong>.</p>
+<p class="annotate">If we have two observables <span class="arithmatex">\(\hat{A}\)</span> and <span class="arithmatex">\(\hat{B}\)</span> that commute, <span class="arithmatex">\([\hat{A}, \hat{B}] = 0\)</span>, a key feature is that it is always possible to find a common set of eigenstates of <span class="arithmatex">\(\hat{A}\)</span> and <span class="arithmatex">\(\hat{B}\)</span> that form a basis in state space(1).</p>
+<ol>
+<li>See <a href="#prof-m-compatible">[1]</a> for proof.</li>
+</ol>
 <h2 id="unitary-operators">Unitary operators</h2>
+<p>Another very important subset of operators are the <strong>unitary operators</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">Unitary operators</p>
-<p>Another important subset of operators are the <strong>unitary operators</strong>. An operator is unitary if <strong>its inverse is equal to its adjoint</strong>:</p>
+<p>An operator <span class="arithmatex">\(\hat{U}\)</span> is unitary if <strong>its inverse is equal to its adjoint</strong>:</p>
 <div class="arithmatex">\[
-\hat{A}^{-1} = \hat{A}^\dagger.
+\begin{align}
+    \hat{U}^{-1} = \hat{U}^\dagger \Leftrightarrow\\
+    \hat{U}^\dagger\hat{U} = \hat{U}\hat{U}^\dagger = \mathbb{I}.
+\end{align}
 \]</div>
 </div>
+<h2 id="references">References</h2>
+<p><span id="prof-m-compatible">[1]</span> Professor M does Science, Cambridge, U.K. <em>Compatible observables in quantum mechanics</em>. (Jul. 15, 2020). Accessed: Aug. 27, 2024. [Online Video]. Available: <a href="https://youtu.be/IhJvX4H7xkA?si=gPwXJTg3_RRvY945">https://youtu.be/IhJvX4H7xkA?si=gPwXJTg3_RRvY945</a>.</p>
 
 
 
