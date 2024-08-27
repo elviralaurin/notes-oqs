@@ -1,4 +1,4 @@
-# Change of basis
+# Bases and representation
 A state vector $\ket{\psi}$ can be written in terms of a set of basis vectors $\{\ket{u_i}\}$, which spans $\mathcal{H}$.
 
 In the vast majority of cases, we'll be dealing with orthonormal bases:
@@ -21,6 +21,8 @@ In the vast majority of cases, we'll be dealing with orthonormal bases:
 
     Thus, a basis $\{\ket{u_i}\}$ is orthonormal if $\braket{u_i | u_j} = \delta_{ij}$.
 
+    On this page, we will call this basis the u-basis.
+
 Every ket $\ket{\psi} \in \mathcal{H}$ has a **unique** expansion of the basis vectors:
 
 $$
@@ -28,6 +30,8 @@ $$
 $$
 
 where $c_i$ is the expansion coefficient for the $i$th basis vector $\ket{u_i}$. This means that if the basis is known, we only need the set of expansion coefficients $c_i$ to uniquely identify a state vector.
+
+We call $c_i$ the **representation** of $\ket{\psi}$ in the basis $\{\ket{u_i}\}$.
 
 !!! info "Determining the expansion coefficients"
     Given a basis $\{\ket{u_i}\}$ spanning $\mathcal{H}$, we can find the expansion coefficients of a state $\ket{\psi} \in \mathcal{H}$ as follows:
@@ -44,11 +48,14 @@ where $c_i$ is the expansion coefficient for the $i$th basis vector $\ket{u_i}$.
 
     Note that in the second to last step, $\delta_{ij} = 0$ for every single term for which $i \neq j$. This leaves only one term in the sum: the one where $i = j$, which makes $\delta_{ij} = 1$, which results in $c_i\delta_{ij} = c_i \cdot 1 = c_i$.
 
-Say we have the ket $\ket{\psi}$. We can write it in the orthonormal basis $\{\ket{u_i}\}$ like so:
+## Kets in the u-basis
+Given a ket $\ket{\psi}$, we can write it in the $u$-basis, i.e. the orthonormal basis $\{\ket{u_i}\}$, like so:
 
 $$
 \ket{\psi} = \sum_i{c_i\ket{u_i}}, \quad\quad c_i = \braket{u_i | \psi}.
 $$
+
+## Bras in the u-basis
 
 We now know how to represent a given ket in a specific basis. How about the bras?
 
@@ -65,23 +72,23 @@ $$
 \end{align}
 $$
 
+## Operators in the u-basis
 Finally, we want to be able to express operators in terms of a specific basis.
 
-!!! info "Writing an operator in a particular orthonormal basis"
-    We can write an operator $\hat{A}\ket{\psi} = \ket{\psi'}$ in a particular orthonormal basis $\{\ket{u_i}\}$ like so(1):
-    { .annotate }
+We can write an operator $\hat{A}\ket{\psi} = \ket{\psi'}$ in a particular orthonormal basis $\{\ket{u_i}\}$ like so(1):
+{ .annotate }
 
-    1.    See [[1]](#prof-m-matrix) for proof.
+1.    See [[1]](#prof-m-matrix) for proof.
 
-    $$
-    \hat{A} = \sum_{ij}{\ket{u_i}\bra{u_i}\hat{A}\ket{u_j}\bra{u_j}},
-    $$
-    
-    which, if we let $A_{ij}$ be the matrix element $\bra{u_i}\hat{A}\ket{u_j}$, becomes:
+$$
+\hat{A} = \sum_{ij}{\ket{u_i}\bra{u_i}\hat{A}\ket{u_j}\bra{u_j}},
+$$
 
-    $$
-    \hat{A} = \sum_{ij}{A_{ij}\ket{u_i}\bra{u_j}}.
-    $$
+which, if we let $A_{ij}$ be the matrix element $\bra{u_i}\hat{A}\ket{u_j}$, becomes:
+
+$$
+\hat{A} = \sum_{ij}{A_{ij}\ket{u_i}\bra{u_j}}.
+$$
 
 ## References
 <span id="prof-m-matrix">[1]</span> Professor M does Science, Cambridge, U.K. *Matrix formulation of quantum mechanics*. (June 24, 2020). Accessed: Aug. 20, 2024. [Online Video]. Available: [https://youtu.be/wIwnb1ldYTI](https://youtu.be/wIwnb1ldYTI).

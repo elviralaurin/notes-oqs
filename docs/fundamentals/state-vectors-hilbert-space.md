@@ -27,6 +27,9 @@ If a state vector is written as a linear combination of other state vectors, we 
 
     A **wave function** is a complex-valued function that is a mathematical description of a quantum system. It is a different way of representing the state of a quantum system. It is less general than that of the vector representation, as it implicitly chooses a basis.
 
+!!! info "Number of real parameters for vectors in $\mathcal{H}$"
+    Say we have a Hilbert space $\mathcal{H}$ with dimensionality $D$. Then the number of real parameters that we need to describe a vector in $\mathcal{H}$ is $2D$, since the vector will have $D$ complex components, and there are two real parameters for each complex number.
+
 ## References
 <!-- <span id="griffiths">[1]</span> D. J. Griffiths, D. F. Schroeter, *Introduction to Quantum Mechanics*, 3rd ed. Cambridge, U.K.: Cambridge Univ. Press, 2018, [doi: 10.1017/9781316995433](https://doi.org/10.1017/9781316995433). -->
 <span id="prof-m-dirac">[1]</span> Professor M does Science, Cambridge, U.K. *Dirac Notation: State Space And Dual Space*. (May 23, 2020). Accessed: Jul. 3, 2024. [Online Video]. Available: [https://www.youtube.com/watch?v=hJoWM9jf0gU](https://www.youtube.com/watch?v=hJoWM9jf0gU).
