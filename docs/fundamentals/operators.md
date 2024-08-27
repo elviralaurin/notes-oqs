@@ -173,8 +173,10 @@ We say that two observables $\mathcal{A}$ and $\mathcal{B}$ are **compatible** i
     [\hat{A}, \hat{B}] = 0.
     $$
 
-If two observables are compatible, it means that they can be measured **simultaneously**.
+If we have two observables $\hat{A}$ and $\hat{B}$ that commute, $[\hat{A}, \hat{B}] = 0$, a key feature is that it is always possible to find a common set of eigenstates of $\hat{A}$ and $\hat{B}$ that form a basis in state space(1).
+{ .annotate }
 
+1.    See [[1]](#prof-m-compatible) for proof.
 
 ## Unitary operators
 
@@ -184,3 +186,6 @@ If two observables are compatible, it means that they can be measured **simultan
     $$
     \hat{A}^{-1} = \hat{A}^\dagger.
     $$
+
+## References
+<span id="prof-m-compatible">[1]</span> Professor M does Science, Cambridge, U.K. *Compatible observables in quantum mechanics*. (Jul. 15, 2020). Accessed: Aug. 27, 2024. [Online Video]. Available: [https://youtu.be/IhJvX4H7xkA?si=gPwXJTg3_RRvY945](https://youtu.be/IhJvX4H7xkA?si=gPwXJTg3_RRvY945).
