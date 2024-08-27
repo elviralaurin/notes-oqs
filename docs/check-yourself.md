@@ -77,3 +77,30 @@
         since the eigenvectors are normalized.
 
         Since the probabilities of the total set of possible outcomes must sum to 1, this means that all other eigenstates have a zero probability.
+
+!!! question "Example: probabilities and the expectation value"
+    Say we measure the observable $\hat{A}$ of a system in state $\ket{\psi}$. $\hat{A}$ has two eigenvalues, $\lambda_+$ and $\ket{\lambda_-}$, such that the eigenvalue equations are given by:
+
+    $$
+    \begin{align}
+        \hat{A}\ket{\lambda_+} = \ket{\lambda_+},\\
+        \hat{A}\ket{\lambda_-} = -\ket{\lambda_-}.
+    \end{align}
+    $$
+
+    The current state is given by $\ket{\psi} = \frac{1}{\sqrt{2}}(\ket{\lambda_+} + \ket{\lambda_-})$.
+
+    Calculate the following:
+
+    1. The probability of measuring $\lambda_+$
+    2. The probability of measuring $\lambda_-$
+    3. The expectation value $\braket{\hat{A}}_\psi$
+    
+    ??? success "Answer"
+        We use the Born rule to find the probabilities:
+
+        $$
+        \begin{align}
+            P(\lambda_+) = |\braket{\lambda_+ | \psi}|^2 = |\braket{\lambda_+ | \psi}|^2
+        \end{align}
+        $$

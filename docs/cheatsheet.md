@@ -140,3 +140,17 @@ Let $\hat{A}$, $\hat{B}$, and $\hat{C}$ be linear operators acting on $\mathcal{
     $$
     \hat{A} = \sum_{ij}{A_{ij}\ket{u_i}\bra{u_j}}, \quad\quad A_{ij} = \bra{u_i}\hat{A}\ket{u_j}.
     $$
+
+!!! info "Born rule"
+    For a system in state $\ket{\psi}$, the probability of getting a particular measurement outcome $\lambda_n$ of observable $\hat{A}$ is given by the Born rule:
+
+    $$
+    P(\lambda_n) = |\braket{\lambda_n | \psi}|^2 = |c_n|^2.
+    $$
+
+!!! info "Expectation value"
+    The expectation value $\braket{\hat{A}}_\psi$ of an observable $\hat{A}$ in a normalized state $\ket{\psi}$ is given by:
+    
+    $$
+    \braket{\hat{A}}_\psi = \sum_n{\lambda_n P(\lambda_n)} = \sum_n{\lambda_n |\braket{\lambda_n | \psi}|^2} = \sum_n{\lambda_n |c_n|^2} = \bra{\psi}\hat{A}\ket{\psi}.
+    $$

@@ -5,7 +5,7 @@ What we will find is that it is **impossible** to predict the outcome of a measu
 
 This is quite a bold statement. All physical laws we are aware of in the world of classical mechanics are deterministic &mdash; every event has a cause and an effect. If you know *everything* about the state of something at any point in time (i.e. complete, perfect knowledge, if such a thing could exist), it is possible to retrace all past states, and to predict all future states.
 
-When we say that it is impossible to predict the outcome of a quantum measurement, it implies that some things don't have a clear cause and effect. Note that we aren't saying that we just simply don't know how to predict the outcome, we are making the stronger claim of it physically not being possible.
+When we say that it is impossible to predict the outcome of a quantum measurement, it implies that some things don't have a clear cause and effect. Note that we aren't saying that we just simply don't know how to predict the outcome, we are making the stronger claim of it physically not being possible to know.
 
 I don't know about you, but to me, this claim sounds absolutely insane. Hopefully, we'll be able to shed some light on why this is the best conclusion.
 
@@ -100,9 +100,7 @@ So we know that if we measure a physical quantity $\mathcal{A}$, it will result 
 
 So far, perhaps forever, the Born rule is the best we've got when it comes to the prediction of quantum measurements.
 
-So if an isolated quantum system is in a state $\ket{\psi}$, the measurement of a physical property $\mathcal{A}$ of the system will result in one of the eigenvalues $\lambda_n$ of $\hat{A}$, where $\hat{A}$ is the corresponding Hermitian operator to $\mathcal{A}$. Once the system has been measured, its state will instantaneously become the eigenstate $\lambda_n$ to the corresponding eigenvalue $\lambda_n$.
-
-Since we can write a state $\ket{\psi}$ in terms of some basis to $\mathcal{H}$, and we know that the eigenstates of an operator $\hat{A}$ form such a basis, we can write $\ket{\psi}$ like so:
+Now, since we can write a state $\ket{\psi}$ in terms of some basis to $\mathcal{H}$, and we know that the eigenstates of an operator $\hat{A}$ form such a basis, we can write $\ket{\psi}$ like so:
 
 $$
 \ket{\psi} = \sum_n{c_n\ket{\lambda_n}}, \quad\quad c_n = \braket{\lambda_n | \psi}.
@@ -116,6 +114,58 @@ $$
     P(\lambda_n) = |c_n|^2.
 \end{align}
 $$
+
+So another way to express the Born rule is by using the expansion coefficients.
+
+The Born rule gives us a means to find the probability distribution of the measurement outcome given a system in state $\ket{\psi}$. For each possible outcome, i.e. eigenvalue of the observable $\hat{A}$ in question, there is an associated probability given by the Born rule.
+
+Now, what happens after a measurement has been done?
+
+!!! info "State collapse"
+    Let $\lambda_n$ be the eigenvalue that the measurement of property $\mathcal{A}$ of the system resulted in. Then, the system will be in state $\ket{\lambda_n}$ **immediately** after the measurement, where $\ket{\lambda_n}$ is the eigenstate associated with $\lambda_n$.
+
+So if an isolated quantum system is in a state $\ket{\psi}$, the measurement of a physical property $\mathcal{A}$ of the system will result in one of the eigenvalues $\lambda_n$ of $\hat{A}$, where $\hat{A}$ is the corresponding Hermitian operator to $\mathcal{A}$. Once the system has been measured, its state will instantaneously become the eigenstate $\lambda_n$ to the corresponding eigenvalue $\lambda_n$.
+
+## Expectation value
+Just like in any other application of probability theory, there exists the notion of the **expectation value** in quantum mechanics as well.
+
+!!! info "Expectation value"
+    The expectation value $\braket{\hat{A}}_{\psi}$ of an observable $\hat{A}$ of a system in a normalized state $\ket{\psi}$ is the average value of the measurement outcomes:
+
+    $$
+    \braket{\hat{A}}_\psi = \sum_n{\lambda_n P(\lambda_n)} = \sum_n{\lambda_n |\braket{\lambda_n | \psi}|^2} = \sum_n{\lambda_n |c_n|^2}.
+    $$
+
+    There is also an alternative form of the expectation value that is very commonly used in quantum mechanics:
+
+    $$
+    \braket{\hat{A}}_\psi = \bra{\psi}\hat{A}\ket{\psi}.
+    $$
+
+    ??? abstract "Proof: Alternative form of the expectation value"
+        $$
+        \begin{align}
+            \bra{\psi}\hat{A}\ket{\psi} = && \\
+            \bra{\psi}\mathbb{I}\hat{A}\mathbb{I}\ket{\psi} = && \tiny{\text{insert resolution of id.}}\\
+            \bra{\psi}\Bigl( \sum_n{\ket{\lambda_n}\bra{\lambda_n}} \Bigr)\hat{A}\Bigl( \sum_m{\ket{\lambda_m}\bra{\lambda_m}} \Bigr)\ket{\psi} = && \tiny{\text{move sums to beginning}}\\
+            \sum_{n, m}{\braket{\psi | \lambda_n} \bra{\lambda_n}\hat{A}\ket{\lambda_m} \braket{\lambda_m | \psi}} = && \tiny{\text{eigenvalue eq. $\hat{A}\ket{\lambda_m} = \lambda_m\ket{\lambda_m}$}}\\
+            \sum_{n, m}{\lambda_m\braket{\psi | \lambda_n} \braket{\lambda_n | \lambda_m} \braket{\lambda_m | \psi}} = && \tiny{\text{basis is orthonormal, $\braket{\lambda_n | \lambda_m} = \delta_{nm}$}}\\
+            \sum_{n, m}{\delta_{nm} \lambda_m\braket{\psi | \lambda_n} \braket{\lambda_m | \psi}} = && \tiny{\text{only nonzero term is when $n = m \Rightarrow \delta_{nm} = 1$}}\\
+            \sum_n{\lambda_n \braket{\psi | \lambda_n} \braket{\lambda_n | \psi}} = && \\
+            \sum_n{\lambda_n \braket{\lambda_n | \psi}^* \braket{\lambda_n | \psi}} = && \tiny{\text{for $z \in \mathbb{C}$, $zz^* = |z|^2$}}\\
+            \sum_n{\lambda_n |\braket{\lambda_n | \psi}|^2}. &&
+        \end{align}
+        $$
+
+        Q.E.D.
+
+    If we are **not** working with normalized states, the expectation value is simply given by:
+
+    $$
+    \braket{\hat{A}}_\psi = \frac{\bra{\psi} \hat{A} \ket{\psi}}{\braket{\psi | \psi}}.
+    $$
+
+The expectation value **does not** necessarily equal any actual measurement outcome. 
 
 ## References
 <span id="shankar-l1">[1]</span> YaleCourses, Yale Univ. Press, New Haven, CT, USA. *19. Quantum Mechanics I: The key experiments and wave-particle duality*. (March 24, 2011). Accessed: Aug. 22, 2024. [Online Video]. Available: [https://youtu.be/uK2eFv7ne_Q?feature=shared](https://youtu.be/uK2eFv7ne_Q?feature=shared).

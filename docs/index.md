@@ -7,3 +7,5 @@ These notes are my attempt to understand quantum mechanics and open quantum syst
 Please note that I am writing these notes as I myself am learning the topic. I am no expert in any sense of the word.
 
 All mistakes are my own. If you spot an error or disagree with anything, please leave a comment or a pull request in the [GitHub repository for this project](https://github.com/elviralaurin/notes-oqs).
+
+**These notes are unfinished!** I am continuously updating them as I learn.

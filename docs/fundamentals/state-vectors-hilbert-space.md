@@ -1,5 +1,5 @@
 # State vectors and Hilbert space
-The state of a closed physical system can be described by a *state vector* or *wave function* which is an element of some Hilbert space $\mathcal{H}$.
+The state of a closed physical system can be described by a *state vector* or *wave function* which is an element of some *complex Hilbert space*, denoted here with $\mathcal{H}$.
 
 Throughout these notes and in most other QM resources available, state vectors are written in *Dirac notation* and are then called *kets*. A ket is written with a vertical bar (`|`), followed by the name or label of the ket (often a Greek letter like $\psi$(1) or $\phi$(2)), followed by a right-angle bracket (`>`). The following is a ket: $\ket{\psi}$.
 { .annotate }
@@ -9,7 +9,7 @@ Throughout these notes and in most other QM resources available, state vectors a
 
 $\mathcal{H}$ can be *infinite-dimensional*. If we think of vectors as an ordered list of numbers, this means that the list can be infinitely long. An equivalent way to think about it is that we might need an infinite number of basis vectors to represent a given vector in $\mathcal{H}$.
 
-Another important thing to remember about $\mathcal{H}$ is that whenever we talk about scalars, we mean complex scalars. In other words, vector components are complex, and the scalars we scale vectors with are complex, and so on. Always assume that the numbers we work with are complex, i.e. can include an imaginary term, **unless otherwise specified**.
+Another important thing to remember about $\mathcal{H}$ is that whenever we talk about scalars, we mean complex scalars. In other words, vector components are complex, and the scalars we scale vectors with are complex, and so on. Always assume that the numbers we work with are complex, i.e. can include an imaginary term, unless otherwise specified.
 
 Just like with vectors in Euclidean space, we can scale state vectors by multiplying them with scalars. We can also add state vectors together, and the result will be another state vector.
 
