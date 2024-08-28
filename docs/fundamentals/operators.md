@@ -128,5 +128,7 @@ Another very important subset of operators are the **unitary operators**.
     \end{align}
     $$
 
+The product of two unitary operators $\hat{U}$ and $\hat{V}$ is also unitary.
+
 ## References
 <span id="prof-m-compatible">[1]</span> Professor M does Science, Cambridge, U.K. *Compatible observables in quantum mechanics*. (Jul. 15, 2020). Accessed: Aug. 27, 2024. [Online Video]. Available: [https://youtu.be/IhJvX4H7xkA?si=gPwXJTg3_RRvY945](https://youtu.be/IhJvX4H7xkA?si=gPwXJTg3_RRvY945).

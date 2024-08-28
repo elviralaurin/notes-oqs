@@ -132,4 +132,58 @@ Here is your answer: observables are represented by Hermitian operators because 
 
     Since $\lambda \neq \mu$, the only way this can be true is if $\braket{\mu | \lambda} = 0$, which means that $\ket{\lambda}$ and $\ket{\mu}$ are orthogonal. QED.
 
-## Eigenvalues of unitary operators
+## Eigenvalues and eigenstates of unitary operators
+Given a unitary (but not necesarily Hermitian) operator $\hat{U}$, consider the eigenvalue equation:
+
+$$
+\hat{U}\ket{\lambda} = \lambda\ket{\lambda}.
+$$
+
+The eigenvalues $\lambda_n$ of a unitary operator $\hat{U}$ obey $|\lambda_n| = 1$, and can therefore be written in the form:
+
+$$
+\lambda_n = e^{i\phi_n},\quad\quad\phi_n \in \mathbb{R},
+$$
+
+??? abstract "Proof: The eigenvalues of a unitary operator have unit magnitude"
+    Consider the norm:
+    
+    $$
+    \begin{align}
+        \|\hat{U}\ket{\lambda}\|^2 = && \\
+        \|\lambda\ket{\lambda}\|^2 = && \\
+        \Bigl(\lambda^*\bra{\lambda}\Bigr)\Bigl( \lambda\ket{\lambda} \Bigr) = && \tiny{\text{with $\|\psi\|^2 = \braket{\psi | \psi}$}}\\
+        \lambda^*\lambda\braket{\lambda | \lambda} = && \\
+        \lambda^*\lambda = && \tiny{\text{assuming $\ket{\lambda}$ is normalized}}\\
+        |\lambda|^2. &&
+    \end{align}
+    $$
+    
+    Now, consider the norm again:
+
+    $$
+    \begin{align}
+        \|\hat{U}\ket{\lambda}\|^2 = && \\
+        \Bigl(\bra{\lambda}\hat{U}^\dagger\Bigr) \Bigl(\hat{U}\ket{\lambda}\Bigr) = && \\
+        \bra{\lambda}\hat{U}^\dagger\hat{U}\ket{\lambda} = && \\
+        \bra{\lambda}\mathbb{I}\ket{\lambda} = && \\
+        \braket{\lambda | \lambda} = && \\
+        1. &&
+    \end{align}
+    $$
+    
+    Given the above, we find that $|\lambda|^2 = 1$.
+
+This means that the norm of the eigenvalues of a unitary operator is always equal to one, which can be described by all points on the radius of a unit circle in the complex plane.
+
+!!! info "Bra version of the eigenvalue equation"
+    For a unitary operator $\hat{U}$, we can write the eigenvalue equation in dual space in a really straight-forward way:
+
+    $$
+    \begin{align}
+        \hat{U}\ket{\lambda} = \lambda\ket{\lambda} \Rightarrow\\
+        \bra{\lambda}\hat{U} = \lambda\bra{\lambda}.
+    \end{align}
+    $$
+
+If we have a unitary operator with two **distinct** eigenvalues $\lambda$ and $\mu$, the corresponding eigenstates $\ket{\lambda}$ and $\ket{\mu}$ are orthogonal.

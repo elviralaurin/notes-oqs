@@ -104,3 +104,11 @@
             P(\lambda_+) = |\braket{\lambda_+ | \psi}|^2 = |\braket{\lambda_+ | \psi}|^2
         \end{align}
         $$
+
+!!! question "Hermitian and unitary eigenvalues"
+    What special properties do the eigenvalues of Hermitian operators have? What special properties do the eigenvalues of unitary operators have?
+    
+    ??? success "Answer"
+        Hermitian operators have real eigenvalues, which is one of the main reasons why they are used to represent physical properties.
+
+        Unitary operators have complex eigenvalues with magnitude 1.

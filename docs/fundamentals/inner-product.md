@@ -59,4 +59,4 @@ This is no accident. That "flipped ket" $\bra{\phi}$ is called a *bra*, and stic
     \end{align}
     $$
 
-You can find a summary of the above in the [cheatsheet](../cheatsheet.md).
+    This quantity, $\braket{\psi | \psi}$, is called the **norm** of $\ket{\psi}$ and is also written $\|\ket{\psi}\|^2$ or $|\ket{\psi}|^2$.
