@@ -176,7 +176,7 @@ $$
 
 This means that the norm of the eigenvalues of a unitary operator is always equal to one, which can be described by all points on the radius of a unit circle in the complex plane.
 
-!!! info "Bra version of the eigenvalue equation"
+!!! info "Bra version of the eigenvalue equation for unitary operators"
     For a unitary operator $\hat{U}$, we can write the eigenvalue equation in dual space in a really straight-forward way:
 
     $$
@@ -186,4 +186,72 @@ This means that the norm of the eigenvalues of a unitary operator is always equa
     \end{align}
     $$
 
-If we have a unitary operator with two **distinct** eigenvalues $\lambda$ and $\mu$, the corresponding eigenstates $\ket{\lambda}$ and $\ket{\mu}$ are orthogonal.
+    ??? abstract "Proof"
+        Let $\ket{\lambda}$ be an eigenstate to $\hat{U}$. Then:
+
+        $$
+        \begin{align}
+            \ket{\lambda} = \mathbb{I}\ket{\lambda} \Leftrightarrow && \\
+            \ket{\lambda} = \hat{U}^\dagger\hat{U}\ket{\lambda} \Leftrightarrow && \\
+            \ket{\lambda} = \hat{U}^\dagger\bigl(\lambda\ket{\lambda}\bigr) \Leftrightarrow && \\
+            \ket{\lambda} = \lambda\hat{U}^\dagger\ket{\lambda} \Leftrightarrow && \small{\text{$\lambda$ has magnitude 1}}\\
+            \ket{\lambda} = e^{i\phi}\hat{U}^\dagger\ket{\lambda} \Leftrightarrow && \\
+            e^{-i\phi}\ket{\lambda} = \hat{U}^\dagger\ket{\lambda} \Leftrightarrow && \\
+            \lambda^*\ket{\lambda} = \hat{U}^\dagger\ket{\lambda} \Rightarrow && \small{\text{go to dual space}}\\
+            \lambda\bra{\lambda} = \hat{U}\bra{\lambda}.
+        \end{align}
+        $$
+
+!!! info "Distinct eigenvalues of unitary operator implies orthogonal eigenstates"
+    For two eigenvalues $\lambda$ and $\mu$ to a unitary operator $\hat{U}$, where $\lambda \neq \mu$, the corresponding eigenstates $\ket{\lambda}$ and $\ket{\mu}$ are orthogonal:
+
+    $$
+    \braket{\lambda | \mu} = 0.
+    $$
+
+    ??? abstract "Proof"
+        Consider two eigenstates of $\hat{U}$, $\ket{\lambda}$ and $\ket{\mu}$ and their corresponding eigenvalues $\lambda$ and $\mu$:
+
+        $$
+        \begin{align}
+            \hat{U}\ket{\lambda} = \lambda\ket{\lambda},\\
+            \hat{U}\ket{\mu} = \mu\ket{\mu}.
+        \end{align}
+        $$
+
+        We write the eigenvalue equation for $\mu$ in the bra version:
+
+        $$
+        \bra{\mu}\hat{U} = \mu\bra{\mu}.
+        $$
+
+        We begin with the matrix element $\bra{\mu}\hat{U}\ket{\lambda}$:
+
+        $$
+        \begin{align}
+            \bra{\mu}\hat{U}\ket{\lambda} =\\
+            \bra{\mu}\Bigl(\lambda\ket{\lambda}\Bigr) =\\
+            \lambda\braket{\mu | \lambda}.
+        \end{align}
+        $$
+
+        We again begin with the same matrix element $\bra{\mu}\hat{U}\ket{\lambda}$:
+
+        $$
+        \begin{align}
+            \bra{\mu}\hat{U}\ket{\lambda} =\\
+            \Bigl( \mu\bra{\mu} \Bigr)\ket{\lambda} =\\
+            \mu\braket{\mu | \lambda}.
+        \end{align}
+        $$
+
+        We can then set the two expressions above equal to each other:
+
+        $$
+        \begin{align}
+            \lambda\braket{\mu | \lambda} = \mu\braket{\mu | \lambda} \Leftrightarrow\\
+            \lambda\braket{\mu | \lambda} - \mu\braket{\mu | \lambda} = 0 \Leftrightarrow\\
+            (\lambda - \mu)\braket{\mu | \lambda} = 0 \Rightarrow\\
+            \lambda \neq \mu \Rightarrow \braket{\mu | \lambda} = 0,\quad\text{QED}.
+        \end{align}
+        $$

@@ -48,6 +48,7 @@ nav:
     - Outer product: fundamentals/outer-product.md
     - Bases and representation: fundamentals/bases-representation.md
     - Eigenvalues and eigenstates: fundamentals/eigenvalues-eigenstates.md
+    - Unitary transformations: fundamentals/unitary-transformations.md
     - Measurement: fundamentals/measurement.md
   - Open Quantum Systems:
     - oqs/index.md
