@@ -50,6 +50,7 @@ nav:
     - Eigenvalues and eigenstates: fundamentals/eigenvalues-eigenstates.md
     - Unitary transformations: fundamentals/unitary-transformations.md
     - The Schrödinger equation: fundamentals/schrodinger-equation.md
+    - The time evolution operator: fundamentals/time-evol-op.md
     - Measurement: fundamentals/measurement.md
   - Open Quantum Systems:
     - oqs/index.md
