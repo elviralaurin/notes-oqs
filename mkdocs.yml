@@ -45,7 +45,7 @@ nav:
     - Inner product: fundamentals/inner-product.md
     - Dual space: fundamentals/dual-space.md
     - Operators: fundamentals/operators.md
-    - Outer product: fundamentals/outer-product.md
+    - Projection operators: fundamentals/projection-operators.md
     - Bases and representation: fundamentals/bases-representation.md
     - Eigenvalues and eigenstates: fundamentals/eigenvalues-eigenstates.md
     - Unitary transformations: fundamentals/unitary-transformations.md
