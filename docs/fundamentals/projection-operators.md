@@ -17,6 +17,12 @@ We call this operation $\ket{\phi}\bra{\psi}$ the *outer product*, and in contra
     - The **inner product** $\braket{\psi | \phi} = a \in \mathbb{C}$ results in a complex number.
     - The **outer product** $\ket{\phi} \bra{\psi} = \hat{A} \in \mathbb{C}^{n \times n}$ results in an operator, which can be written as a matrix.
 
+If you take the adjoint of the outer product, you just exchange the order of the arguments:
+
+$$
+(\ket{\psi} \bra{\phi})^\dagger = \ket{\phi} \bra{\psi}.
+$$
+
 ## Projection operators as outer products
 Say we have a normalized state vector $\ket{\psi}$, such that $\braket{\psi | \psi} = 1$. We define the *projection operator* $\hat{P}_\psi$ as the outer product of the state with itself:
 
