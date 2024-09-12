@@ -56,6 +56,7 @@ nav:
     - oqs/index.md
     - Qubits: oqs/qubits.md
     - Density operator: oqs/density-operator.md
+    - Composite state spaces: oqs/composite-state-spaces.md
   - Cheatsheet: cheatsheet.md
   - Check yourself: check-yourself.md
 
