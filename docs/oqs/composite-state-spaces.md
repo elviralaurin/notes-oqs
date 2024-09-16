@@ -126,4 +126,54 @@ $$
 \end{cases}
 $$
 
-We know that all the $c$'s on the right-hand side are complex scalars. If we attempt to solve this, we will find that $c_{00}c_{11} - c_{01}c_{10} = 0$.
+We'll assume here that $\alpha, \beta, \gamma, \delta$ are all nonzero. This makes this part a bit incomplete, but one can easily go through each case ($\alpha = 0$, $\beta = 0$, etc.) and see that $\ket{\psi}$ is separable for all those cases.
+
+Solving the first two equations for $\gamma$ and $\delta$, we get:
+
+$$
+\begin{align}
+    \alpha\gamma = c_{00} \Leftrightarrow \gamma = \frac{c_{00}}{\alpha},\\
+    \alpha\delta = c_{01} \Leftrightarrow \delta = \frac{c_{01}}{\alpha}.\\
+\end{align}
+$$
+
+We can insert these into the second two equations to get:
+
+$$
+\begin{align}
+    \beta\gamma = c_{10} \Leftrightarrow \beta\Bigl(\frac{c_{00}}{\alpha}\Bigr) = c_{10} \Leftrightarrow \beta = \alpha \frac{c_{10}}{c_{00}}\\
+    \beta\delta = c_{11} \Leftrightarrow \beta\Bigl(\frac{c_{01}}{\alpha}\Bigr) = c_{11} \Leftrightarrow \beta = \alpha \frac{c_{11}}{c_{01}}.
+\end{align}
+$$
+
+Since we have two different expressions for $\beta$, we can set them equal to each other to get:
+
+$$
+\begin{align}
+    \alpha \frac{c_{10}}{c_{00}} = \alpha \frac{c_{11}}{c_{01}} \Leftrightarrow\\
+    \frac{c_{10}}{c_{00}} = \frac{c_{11}}{c_{01}} \Leftrightarrow\\
+    c_{01}c_{10} = c_{00}c_{11} \Leftrightarrow\\
+    c_{00}c_{11} - c_{01}c_{10} = 0.
+\end{align}
+$$
+
+So what have we found? This is the condition that a two-qubit state needs to fulfil in order to be factorizable, i.e. separable. If $c_{00}c_{11} - c_{01}c_{10} \neq 0$, then the state is *entangled*.
+
+## Tensor products and the density matrix
+Again, let's assume that we have a system of two qubits $\mathcal{H}_1$ and $\mathcal{H}_2$ given by $\mathcal{H}_1 \otimes \mathcal{H}_2$.
+
+With the orthonormal basis states as before, i.e. $\ket{0_1}$ and $\ket{1_1}$ for $\mathcal{H}_1$, and $\ket{0_2}$ and $\ket{1_2}$ for $\mathcal{H}_2$, we write a general state of $\mathcal{H}_1 \otimes \mathcal{H}_2$ as:
+
+$$
+\ket{\psi} = c_{00}\ket{00} + c_{01}\ket{01} + c_{10}\ket{10} + c_{11}\ket{11}.
+$$
+
+In density matrix form, the state is given by:
+
+$$
+\begin{align}
+    \rho_\psi =\\
+    \ket{\psi} \bra{\psi} =\\
+    \Bigl(c_{00}\ket{00} + c_{01}\ket{01} + c_{10}\ket{10} + c_{11}\ket{11}\Bigr) \Bigl(c_{00}^*\bra{00} + c_{01}^*\bra{01} + c_{10}^*\bra{10} + c_{11}^*\bra{11}\Bigr) =\\
+\end{align}
+$$
