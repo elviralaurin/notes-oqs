@@ -55,6 +55,7 @@ nav:
   - Open Quantum Systems:
     - oqs/index.md
     - Qubits: oqs/qubits.md
+    - Trace: oqs/trace.md
     - Density operator: oqs/density-operator.md
     - Composite state spaces: oqs/composite-state-spaces.md
   - Cheatsheet: cheatsheet.md

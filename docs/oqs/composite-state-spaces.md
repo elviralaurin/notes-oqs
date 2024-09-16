@@ -159,21 +159,30 @@ $$
 
 So what have we found? This is the condition that a two-qubit state needs to fulfil in order to be factorizable, i.e. separable. If $c_{00}c_{11} - c_{01}c_{10} \neq 0$, then the state is *entangled*.
 
-## Tensor products and the density matrix
-Again, let's assume that we have a system of two qubits $\mathcal{H}_1$ and $\mathcal{H}_2$ given by $\mathcal{H}_1 \otimes \mathcal{H}_2$.
-
-With the orthonormal basis states as before, i.e. $\ket{0_1}$ and $\ket{1_1}$ for $\mathcal{H}_1$, and $\ket{0_2}$ and $\ket{1_2}$ for $\mathcal{H}_2$, we write a general state of $\mathcal{H}_1 \otimes \mathcal{H}_2$ as:
+## Operators
+Operators on a composite state space, $\mathcal{H}_1 \otimes \mathcal{H}_2$, will be on the form $\hat{A} \otimes \hat{B}$, and act on pure tensors $\ket{\psi} \otimes \ket{\varphi}$ as follows:
 
 $$
-\ket{\psi} = c_{00}\ket{00} + c_{01}\ket{01} + c_{10}\ket{10} + c_{11}\ket{11}.
+(\hat{A} \otimes \hat{B})(\ket{\psi} \otimes \ket{\varphi}) = \hat{A}\ket{\psi}\hat{B}\ket{\varphi}.
 $$
 
-In density matrix form, the state is given by:
+So the two factors of an operator $\hat{A} \otimes \hat{B}$ can be thought of as acting on each corresponding factor of the tensor.
+
+We can therefore write operators that only act on one of the components as either $\hat{A} \otimes \mathbb{I}$ or $\mathbb{I} \otimes \hat{A}$, depending on which component we want it to act on. The state vector corresponding to the identity operator $\mathbb{I}$ will be left unchanged.
+
+Finally, we can combine the rules of tensor products introduced earlier to evaluate an expression like the following:
 
 $$
 \begin{align}
-    \rho_\psi =\\
-    \ket{\psi} \bra{\psi} =\\
-    \Bigl(c_{00}\ket{00} + c_{01}\ket{01} + c_{10}\ket{10} + c_{11}\ket{11}\Bigr) \Bigl(c_{00}^*\bra{00} + c_{01}^*\bra{01} + c_{10}^*\bra{10} + c_{11}^*\bra{11}\Bigr) =\\
+    \Bigl( \hat{A} \otimes \hat{B} + \hat{C} \otimes \hat{D} \Bigr)\bigl( \ket{\psi} \otimes \ket{\varphi} \bigr) =\\
+    \Bigl( \hat{A} \otimes \hat{B} \Bigr) \Bigl(\ket{\psi} \otimes \ket{\varphi}\Bigr) + \Bigl(\hat{C} \otimes \hat{D}\Bigr)\Bigl(\ket{\psi} \otimes \ket{\varphi}\Bigr) =\\
+    \hat{A}\ket{\psi} \otimes \hat{B}\ket{\varphi} + \hat{C}\ket{\psi} \otimes \hat{D}\ket{\varphi}.
 \end{align}
+$$
+
+## Expectation value
+If we describe the state of a system with a density operator $\hat{\rho}$, the expectation value of an operator $\hat{A} \otimes \hat{B}$ with the state:
+
+$$
+\braket{\hat{A} \otimes \hat{B}} = \mathbf{tr}\Bigl[\hat{\rho}(\hat{A} \otimes \hat{B})\Bigr].
 $$

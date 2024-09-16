@@ -130,5 +130,16 @@ Another very important subset of operators are the **unitary operators**.
 
 The product of two unitary operators $\hat{U}$ and $\hat{V}$ is also unitary.
 
+## Spectral decomposition
+Any Hermitian operator $\hat{A}$ can be written as:
+
+$$
+\hat{A} = \sum_i{\lambda_i \ket{\lambda_i}\bra{\lambda_i}},
+$$
+
+where $\lambda_i$ are the eigenvalues and the $\ket{\lambda_i}$ are the eigenvectors of the operator[[2]](#spectral-decomp).
+
 ## References
 <span id="prof-m-compatible">[1]</span> Professor M does Science, Cambridge, U.K. *Compatible observables in quantum mechanics*. (Jul. 15, 2020). Accessed: Aug. 27, 2024. [Online Video]. Available: [https://youtu.be/IhJvX4H7xkA?si=gPwXJTg3_RRvY945](https://youtu.be/IhJvX4H7xkA?si=gPwXJTg3_RRvY945).
+
+<span id="spectral-decomp">[2]</span> M. A. Nielsen and I. L. Chuang, "Linear algebra," in *Quantum Computation and Quantum Information*, *2*nd ed., Cambridge, U.K: Cambridge Univ. Press, 2010, ch. 2, p. 72.
