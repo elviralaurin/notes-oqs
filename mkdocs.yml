@@ -38,26 +38,11 @@ theme:
     annotation: octicons/question-24
 
 nav:
-  - Introduction: index.md
+  - About: index.md
   - Fundamentals:
     - fundamentals/index.md
-    - State vectors and Hilbert space: fundamentals/state-vectors-hilbert-space.md
-    - Inner product: fundamentals/inner-product.md
-    - Dual space: fundamentals/dual-space.md
-    - Operators: fundamentals/operators.md
-    - Projection operators: fundamentals/projection-operators.md
-    - Bases and representation: fundamentals/bases-representation.md
-    - Eigenvalues and eigenstates: fundamentals/eigenvalues-eigenstates.md
-    - Unitary transformations: fundamentals/unitary-transformations.md
-    - The Schrödinger equation: fundamentals/schrodinger-equation.md
-    - The time evolution operator: fundamentals/time-evol-op.md
-    - Measurement: fundamentals/measurement.md
   - Open Quantum Systems:
     - oqs/index.md
-    - Qubits: oqs/qubits.md
-    - Trace: oqs/trace.md
-    - Density operator: oqs/density-operator.md
-    - Composite state spaces: oqs/composite-state-spaces.md
   - Cheatsheet: cheatsheet.md
   - Check yourself: check-yourself.md
 
