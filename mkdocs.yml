@@ -41,6 +41,7 @@ nav:
   - About: index.md
   - Fundamentals:
     - fundamentals/index.md
+    - fundamentals/quantum-states.md
   - Open Quantum Systems:
     - oqs/index.md
   - Cheatsheet: cheatsheet.md
